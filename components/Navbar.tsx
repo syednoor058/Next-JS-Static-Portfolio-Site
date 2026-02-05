@@ -8,53 +8,16 @@ import { socials } from "@/constants";
 import { NAV_ITEMS } from "@/constants";
 
 export default function Navbar() {
-  const navRef = useRef<HTMLElement | null>(null);
   const linksRef = useRef<(HTMLLIElement | null)[]>([]);
   const contactRef = useRef<HTMLDivElement | null>(null);
   const topLineRef = useRef<HTMLSpanElement | null>(null);
   const bottomLineRef = useRef<HTMLSpanElement | null>(null);
   const iconTl = useRef<gsap.core.Timeline | null>(null);
-  const menuTl = useRef<gsap.core.Timeline | null>(null);
   const [isOpen, setIsOpen] = useState(false);
   const [showBurger, setShowBurger] = useState(true);
 
   /* ---------------- GSAP ---------------- */
   useGSAP(() => {
-    gsap.set(navRef.current, { xPercent: 100 });
-    gsap.set([linksRef.current, contactRef.current], {
-      autoAlpha: 0,
-      x: -20,
-    });
-
-    menuTl.current = gsap
-      .timeline({ paused: true })
-      .to(navRef.current, {
-        xPercent: 0,
-        duration: 1,
-        ease: "power3.out",
-      })
-      .to(
-        linksRef.current,
-        {
-          autoAlpha: 1,
-          x: 0,
-          stagger: 0.1,
-          duration: 0.5,
-          ease: "power2.out",
-        },
-        "<",
-      )
-      .to(
-        contactRef.current,
-        {
-          autoAlpha: 1,
-          x: 0,
-          duration: 0.5,
-          ease: "power2.out",
-        },
-        "<+0.2",
-      );
-
     iconTl.current = gsap
       .timeline({ paused: true })
       .to(topLineRef.current, {
@@ -93,19 +56,6 @@ export default function Navbar() {
       lastScrollY = currentScrollY;
     };
 
-    // const onScroll = () => {
-    //   if (isOpen) return;
-
-    //   const currentY = window.scrollY;
-    //   const shouldShow = currentY < lastY || currentY < 12;
-
-    //   if (shouldShow !== showBurger) {
-    //     setShowBurger(shouldShow);
-    //   }
-
-    //   lastY = currentY;
-    // };
-
     window.addEventListener("scroll", handleScroll, {
       passive: true,
     });
@@ -115,10 +65,8 @@ export default function Navbar() {
   /* ---------------- Actions ---------------- */
   const toggleMenu = () => {
     if (isOpen) {
-      menuTl.current?.reverse();
       iconTl.current?.reverse();
     } else {
-      menuTl.current?.play();
       iconTl.current?.play();
     }
     setIsOpen(!isOpen);
@@ -129,8 +77,7 @@ export default function Navbar() {
     <>
       {/* Fullscreen Menu */}
       <nav
-        ref={navRef}
-        className="fixed z-50 flex flex-col justify-between w-full h-full px-6 md:px-10 uppercase bg-black text-white/80 py-20 gap-y-10 md:w-1/2 md:left-1/2"
+        className={`fixed z-50 flex flex-col justify-between w-full h-full px-6 md:px-10 uppercase bg-black text-white/80 py-20 gap-y-10 md:w-1/2 md:left-1/2 ${isOpen ? "translate-x-0" : "translate-x-full"} transition-all duration-1000 ease-in-out`}
       >
         <ul className="flex flex-col text-4xl gap-y-2 md:text-5xl">
           {NAV_ITEMS.map((section, index) => (

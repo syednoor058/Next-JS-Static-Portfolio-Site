@@ -6,13 +6,11 @@
 
 @theme {
   --color-primary: #e5e5e0;
-  --color-dark-lava: #393632;
-  --color-sage-gray: #8b8b73;
+  --color-dark-background: #393632;
+  --color-light-background: #8b8b73;
   --color-gold: #cfa355;
-
-  --font-amiamie: "Amiamie", sans-serif;
-  --font-amiamie-round: "Amiamie-Round", sans-serif;
-
+  --color-dark-primary: #1b1b1b;
+  --color-dark-secondary: #393632;
   --animate-marquee: marquee 40s linear infinite;
 }
 

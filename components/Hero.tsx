@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Button from "./ui/Button";
 import Marquee from "react-fast-marquee";
+import FadeIn from "./ui/FadeIn";
 
 const expertiseLogos = [
   {
@@ -85,23 +86,23 @@ const expertiseLogos = [
 
 const Hero = () => {
   return (
-    <section className="w-full flex flex-col min-h-screen relative text-primary pt-10">
+    <section className="w-full lg:min-h-screen flex flex-col relative text-primary pt-10 bg-black">
       {/* Background Cover */}
-      <div className="absolute inset-0 w-full h-full z-0">
+      <FadeIn delay={0.1} className="absolute inset-0 w-full h-full z-0">
         <Image
           src="https://res.cloudinary.com/de8g5laai/image/upload/v1770237736/Guiding_families_through_life_s_most_difficult_transitions_5_rckwnl.png"
           alt="a flower dark background"
           fill
           className="object-cover"
         />
-      </div>
+      </FadeIn>
 
-      <div className="w-full text-start full-width-word text-white font-bold relative z-1">
+      <FadeIn delay={0.3} direction="right" className="w-full text-start full-width-word text-white font-bold relative z-1">
         SOFTWARE
-      </div>
+      </FadeIn>
       {/* <div className="w-full lg:-mt-20 relative z-10">ENGNR.</div> */}
 
-      <div className="w-full -mt-6 lg:-mt-20 relative inline-block">
+      <FadeIn delay={0.5} direction="left" className="w-full -mt-6 lg:-mt-20 relative inline-block">
         <span className="absolute inset-0 z-2 text-end full-width-word text-white font-bold leading-tight">
           ENGNR.
         </span>
@@ -109,16 +110,16 @@ const Hero = () => {
           ENGNR.
         </span>
         <span
-          className="absolute inset-0 z-10 text-end full-width-word text-transparent font-bold leading-tight pointer-events-none"
+          className="absolute inset-0 z-10 text-end full-width-word text-transparent font-bold leading-tight"
           style={{
             WebkitTextStroke: "1px white",
           }}
         >
           ENGNR.
         </span>
-      </div>
+      </FadeIn>
 
-      <div className="absolute z-5 inset-0 w-full h-full flex justify-center items-end">
+      <FadeIn delay={0.4} className="absolute z-5 inset-0 w-full h-full flex justify-center items-end">
         <Image
           src="https://res.cloudinary.com/de8g5laai/image/upload/v1770266190/ChatGPT_Image_Feb_4_2026_09_14_51_PM-Photoroom_diyiou.png"
           alt="syed shaeduzzaman noor photo"
@@ -126,17 +127,19 @@ const Hero = () => {
           width={711}
           className="h-[85%] w-auto"
         />
-      </div>
+      </FadeIn>
 
-      <div className="w-full absolute bottom-0 z-20 flex flex-col gap-10">
+      <div className="w-full relative pt-10 lg:pt-0 lg:absolute bottom-0 z-20 flex flex-col gap-10">
         <div className="px-4 md:px-6 lg:px-0 lg:pl-6 max-w-110 relative z-1">
-          <p className="max-w-2xl mb-8 text-lg lg:text-xl">
+          <FadeIn delay={0.7}>
+            <p className="max-w-2xl mb-8 text-lg lg:text-xl">
             Building scalable web experiences that feel effortless. Driven by
             clean design and thoughtful engineering. Crafted with intent.
           </p>
-          <Button text="Get Connected" />
+          </FadeIn>
+          <FadeIn delay={0.8}><Button text="Get Connected" /></FadeIn>
         </div>
-        <div className="w-full pb-5 bg-linear-to-t from-[#1b1b1b]  to-transparent">
+        <div className="w-full pb-5 bg-linear-to-t from-black to-transparent">
           <Marquee
             speed={80}
             className="overflow-hidden w-full flex flex-row items-center"
