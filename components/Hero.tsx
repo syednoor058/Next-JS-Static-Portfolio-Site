@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Button from "./ui/Button";
 import Marquee from "react-fast-marquee";
 import FadeIn from "./ui/FadeIn";
+import PrimaryButton from "./ui/PrimaryButton";
 
 const expertiseLogos = [
   {
@@ -93,7 +93,7 @@ const Hero = () => {
           src="https://res.cloudinary.com/de8g5laai/image/upload/v1770237736/Guiding_families_through_life_s_most_difficult_transitions_5_rckwnl.png"
           alt="a flower dark background"
           fill
-          className="object-cover"
+          className="object-cover opacity-20"
         />
       </FadeIn>
 
@@ -129,7 +129,7 @@ const Hero = () => {
         />
       </FadeIn>
 
-      <div className="w-full relative pt-10 lg:pt-0 lg:absolute bottom-0 z-20 flex flex-col gap-10">
+      <div className="w-full relative pt-10 lg:pt-0 lg:absolute bottom-0 z-20 flex flex-col gap-10 lg:gap-14">
         <div className="px-4 md:px-6 lg:px-0 lg:pl-6 max-w-110 relative z-1">
           <FadeIn delay={0.7}>
             <p className="max-w-2xl mb-8 text-lg lg:text-xl">
@@ -137,9 +137,9 @@ const Hero = () => {
             clean design and thoughtful engineering. Crafted with intent.
           </p>
           </FadeIn>
-          <FadeIn delay={0.8}><Button text="Get Connected" /></FadeIn>
+          <FadeIn delay={0.8}><PrimaryButton text="Get Connected" /></FadeIn>
         </div>
-        <div className="w-full pb-5 bg-linear-to-t from-black to-transparent">
+        <div className="w-full pb-5 bg-linear-to-t from-black to-transparent opacity-60">
           <Marquee
             speed={80}
             className="overflow-hidden w-full flex flex-row items-center"
@@ -151,7 +151,7 @@ const Hero = () => {
                 alt={item.alt}
                 width={item.width}
                 height={item.height}
-                className="h-5 md:h-6 lg:h-7 w-auto invert-100 pr-7 md:pr-10 lg:pr-20"
+                className="h-5 md:h-6 w-auto invert-100 pr-7 md:pr-10 lg:pr-16"
               />
             ))}
           </Marquee>
