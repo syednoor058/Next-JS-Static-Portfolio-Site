@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+/* =========================
+   Theme tokens (Tailwind v4)
+========================= */
+
+@theme {
+  --color-primary: #e5e5e0;
+  --color-dark-lava: #393632;
+  --color-sage-gray: #8b8b73;
+  --color-gold: #cfa355;
+
+  --font-amiamie: "Amiamie", sans-serif;
+  --font-amiamie-round: "Amiamie-Round", sans-serif;
+
+  --animate-marquee: marquee 40s linear infinite;
+}
+
+/* =========================
+   Animations
+========================= */
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+/* =========================
+   Base styles
+========================= */
+
+body {
+  background: var(--color-primary);
+  color: black;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  font-family: var(--font-geist-sans);
+}
+
+/* =========================
+   Custom utilities (TOP-LEVEL ONLY)
+========================= */
+
+@utility title {
+  @apply text-[34px] sm:text-[52px] md:text-[62px] lg:text-[100px] leading-[1.15];
+}
+
+@utility paragraph {
+  @apply text-sm;
+}
+
+@utility section-container {
+  @apply px-4 md:px-8 lg:px-14 py-10 md:py-14 lg:py-20;
+}
+
+@utility font-oswald {
+  font-family: var(--font-oswald), sans-serif;
+}
+
+@utility full-width-word {
+  @apply text-[18vw] md:text-[16vw] whitespace-nowrap overflow-hidden font-oswald;
+}
