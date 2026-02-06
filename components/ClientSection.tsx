@@ -165,7 +165,7 @@ export default function ClientSection() {
         </div>
 
         {/* Bento Grid - Tablet*/}
-        <div className="mt-10 hidden md:grid lg:hidden grid-cols-3">
+        <div className="hidden md:grid lg:hidden grid-cols-3">
           <LogoCell
             logo={PLACEHOLDER_LOGOS[0]}
             borderClasses="border-r border-b"
@@ -220,7 +220,7 @@ export default function ClientSection() {
         </div>
 
         {/* Bento Grid - Mobile*/}
-        <div className="mt-10 md:hidden grid grid-cols-3">
+        <div className="md:hidden grid grid-cols-3">
           <LogoCell logo={PLACEHOLDER_LOGOS[0]} borderClasses="border-r" />
           <LogoCell logo={PLACEHOLDER_LOGOS[1]} borderClasses="border-r" />
           <LogoCell logo={PLACEHOLDER_LOGOS[2]} />
