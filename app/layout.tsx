@@ -4,6 +4,7 @@ import { Oswald } from "next/font/google";
 import "./globals.css";
 import LenisContainer from "@/components/LenisContainer";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${oswald.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${oswald.variable} antialiased w-screen overflow-x-hidden`}
       >
         <header>
           <Navbar />
@@ -41,6 +42,7 @@ export default function RootLayout({
         <main>
           <LenisContainer>{children}</LenisContainer>
         </main>
+        <Footer />
       </body>
     </html>
   );
