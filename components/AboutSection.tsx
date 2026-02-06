@@ -1,9 +1,10 @@
+import Image from "next/image";
 import FadeIn from "./ui/FadeIn";
 import PrimaryButton from "./ui/PrimaryButton";
 
 const AboutSection = () => {
   return (
-    <section className="relative w-full min-h-screen overflow-hidden bg-black section-container">
+    <section className="relative w-full overflow-hidden bg-black section-container">
       {/* Background */}
       <div className="absolute inset-0 z-0 flex items-center justify-center text-center">
         <div
@@ -17,14 +18,24 @@ const AboutSection = () => {
 
       {/* Foreground Content */}
       <div className="relative z-20 flex flex-col items-center justify-center text-center gap-6">
+        <FadeIn
+        delay={0.2}
+        className={`w-full flex flex-row gap-5 justify-between text-sm uppercase pb-20 text-white/60`}
+      >
+        <span>[01]</span>
+        <span className="text-gold">./About</span>
+        <span>Syed Noor</span>
+      </FadeIn>
         <div>
           <h6 className="text-white text-[6vw] uppercase font-oswald leading-none"><FadeIn delay={0.4}>Creative-first.</FadeIn></h6>
         <h6 className="text-white text-[6vw] uppercase font-oswald leading-none"><FadeIn delay={0.4}>Hospitality focused.</FadeIn></h6>
         <h6 className="text-white text-[6vw] uppercase font-oswald leading-none"><FadeIn delay={0.4}>Systems enabled.</FadeIn></h6>
         </div>
-        <FadeIn delay={0.4}><div className="w-60 aspect-7/10 bg-gold"></div></FadeIn>
+        <FadeIn delay={0.4} className="w-60 aspect-7/10">
+        <Image src="https://res.cloudinary.com/de8g5laai/image/upload/v1770355545/1_jbdjim.jpg" alt="developer photo" width={700} height={1000} className="w-full h-full object-cover" />
+        </FadeIn>
         <FadeIn delay={0.4}>
-          <p className="text-base lg:text-lg text-white/60 font-light max-w-160">We focus on mobile-native content, social media distribution and paid media that have real ‘bums-on-seats’ impact. Whether you’re launching a new venue, managing a legacy group, or growing a precinct, we create the strategy and digital infrastructure that your brands need.</p>
+          <p className="text-base lg:text-lg text-white/60 font-light max-w-160">I work across frontend systems, backend services, and application architecture to deliver scalable web products built for real users. Whether developing a platform from scratch, refining an existing codebase, or optimizing performance, I focus on clean implementation, long-term maintainability, and solutions that support real business growth.</p>
         </FadeIn>
         <FadeIn delay={0.4}><PrimaryButton text="Learn More" /></FadeIn>
       </div>

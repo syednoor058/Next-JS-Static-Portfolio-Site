@@ -60,7 +60,7 @@ export default function ServiceCard({ service, index }: ServiceCardProps) {
   return (
     <article
       ref={ref}
-      className="sticky px-4 md:px-10 pt-6 pb-12 text-white bg-black border-t-2 border-white/30"
+      className="sticky pt-6 pb-12 text-white bg-black border-t-2 border-white/30"
       style={
         isDesktop
           ? {
@@ -72,27 +72,27 @@ export default function ServiceCard({ service, index }: ServiceCardProps) {
     >
       <header className="flex flex-col gap-6">
         <FadeIn delay={0.1}>
-          <h3 className="text-4xl lg:text-5xl">{service.title}</h3>
+          <h3 className="text-3xl md:text-4xl lg:text-5xl">{service.title}</h3>
         </FadeIn>
 
         <FadeIn delay={0.1}>
-          <p className="text-xl lg:text-2xl leading-relaxed text-white/60">
+          <p className="text-lg md:text-xl lg:text-2xl leading-relaxed text-white/60">
             {service.description}
           </p>
         </FadeIn>
       </header>
 
-      <ul className="mt-8 space-y-4 text-2xl lg:text-3xl text-white/80">
+      <ul className="mt-8 space-y-4 text-xl md:text-2xl lg:text-3xl text-white/80">
         {service.items.map((item: ServiceItem, i: number) => (
           <li key={item.title} className="pb-3">
             <FadeIn delay={0.1 + i * 0.1} className="border-b border-white/30">
               <div className="flex flex-row gap-4">
                 <span className="mr-8 text-lg text-white/30">
-                  {String(i + 1).padStart(2, "0")}
+                  [{String(i + 1).padStart(2, "0")}]
                 </span>
                 <div>
                   <h5>{item.title}</h5>
-                  <p className="text-lg text-white/50">{item.description}</p>
+                  <p className="text-base md:text-lg text-white/50">{item.description}</p>
                 </div>
               </div>
             </FadeIn>

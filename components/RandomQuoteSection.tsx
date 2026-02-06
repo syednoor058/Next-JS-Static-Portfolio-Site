@@ -32,7 +32,7 @@ const RandomQuoteSection = () => {
       <Marquee
         speed={80}
         direction="right"
-        className="overflow-hidden w-full py-2 flex items-center marquee-text-responsive font-light uppercase whitespace-nowrap text-black bg-white"
+        className="overflow-hidden w-full py-2 flex items-center marquee-text-responsive font-light uppercase whitespace-nowrap text-black bg-gold"
       >
         {items2.map((item, index) => (
           <span

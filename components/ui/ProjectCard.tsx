@@ -10,12 +10,12 @@ interface Project {
   file: "img" | "vid";
   alt?: string;
   src: string;
-  colSpan: number;
+  colSpan: 5 | 7;
 }
 
 const ProjectCard = ({ project }: { project: Project }) => {
   return (
-    <div className={`md:col-span-${project.colSpan} group`}>
+    <div className={`${project.colSpan === 5 ? "md:col-span-5" : "md:col-span-7"} group`}>
       <FadeIn
         delay={0.2}
         className="w-full aspect-12/9 rounded-md overflow-hidden"

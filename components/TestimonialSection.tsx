@@ -5,6 +5,8 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import { Star } from "lucide-react";
+import FadeIn from "./ui/FadeIn";
+import SectionHeader from "./ui/SectionHeader";
 gsap.registerPlugin(ScrollTrigger);
 
 interface Testimonial {
@@ -46,25 +48,27 @@ const stats = [
 
 const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => (
   <div className="testimonial-card flex flex-col gap-6 justify-center items-center text-center text-lg font-light">
-    <Image
+    <FadeIn delay={0.2}>
+      <Image
       src={testimonial.company}
       alt="company logo"
       width={800}
       height={800}
       className="h-8 w-auto invert-100"
     />
-    <p className="text-base leading-relaxed text-white/60">
+    </FadeIn>
+    <FadeIn delay={0.3}><p className="text-base leading-relaxed text-white/60">
       {testimonial.quote}
-    </p>
+    </p></FadeIn>
     <div className="flex gap-1">
       {[...Array(5)].map((_, i) => (
-        <Star key={i} fill="#cfa355" stroke="#cfa355" />
+        <FadeIn key={i} delay={0.4+i*0.1}><Star fill="#cfa355" stroke="#cfa355" /></FadeIn>
       ))}
     </div>
-    <div className="flex flex-col gap-1">
+    <FadeIn delay={0.4} className="flex flex-col gap-1">
       <span className="font-semibold text-white">{testimonial.name}</span>
       <span className="text-white/60">{testimonial.title}</span>
-    </div>
+    </FadeIn>
   </div>
 );
 
@@ -132,6 +136,9 @@ const Testimonials = () => {
 
   return (
     <section ref={sectionRef} className="section-container bg-[#0d0d0d]">
+
+      <SectionHeader header={["04", "./Validation", "Proof of Impact"]} title={<>Measured<br />Results</>} paragraph="Real feedback and measurable outcomes from delivered projects—reflecting consistent execution, reliable collaboration, and solutions that meet technical expectations and business goals." theme="dark" />
+
       {/* Testimonials Grid */}
       <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-3 gap-16">
         {testimonials.map((testimonial, index) => (
