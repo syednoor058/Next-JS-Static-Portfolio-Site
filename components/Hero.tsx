@@ -88,14 +88,14 @@ const Hero = () => {
   return (
     <section className="w-full lg:min-h-screen flex flex-col relative text-primary pt-10 bg-black">
       {/* Background Cover */}
-      <FadeIn delay={0.1} className="absolute inset-0 w-full h-full z-0">
+      {/* <FadeIn delay={0.1} className="absolute inset-0 w-full h-full z-0">
         <Image
           src="https://res.cloudinary.com/de8g5laai/image/upload/v1770237736/Guiding_families_through_life_s_most_difficult_transitions_5_rckwnl.png"
           alt="a flower dark background"
           fill
-          className="object-cover opacity-20"
+          className="object-cover"
         />
-      </FadeIn>
+      </FadeIn> */}
 
       <FadeIn delay={0.3} direction="right" className="w-full text-start full-width-word text-white font-bold relative z-1">
         SOFTWARE
