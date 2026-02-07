@@ -22,7 +22,7 @@ const items = [
 
 const Hero = () => {
   return (
-    <section className="w-full min-h-[90vh] lg:min-h-screen flex flex-col relative text-primary pt-10 bg-black">
+    <section className="w-full min-h-screen flex flex-col relative text-primary pt-10 bg-black overflow-hidden">
       {/* Background Cover */}
       <FadeIn delay={0.1} className="absolute inset-0 w-full h-full z-0 blur-[0px]">
         <Image
@@ -65,7 +65,7 @@ const Hero = () => {
         delay={0.4}
         className="absolute z-5 inset-0 w-full h-full flex justify-center items-end"
       >
-        <div className="h-[85%] aspect-711/841 ">
+        <div className="h-[70%] lg:h-[85%] aspect-711/841 ">
           <Image
           src="https://res.cloudinary.com/de8g5laai/image/upload/v1770266190/ChatGPT_Image_Feb_4_2026_09_14_51_PM-Photoroom_diyiou.png"
           alt="syed shaeduzzaman noor photo"
