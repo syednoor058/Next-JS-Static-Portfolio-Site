@@ -1,24 +1,25 @@
 import { NAV_ITEMS, socials } from "@/constants";
-import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import FadeIn from "./ui/FadeIn";
+import Image from "next/image";
 
 const Footer = () => {
   return (
     <footer className="bg-gold text-[#1b1b1b] px-4 md:px-8 lg:px-14 pb-5 md:pb-7 lg:pb-10 pt-10 md:pt-14 lg:pt-20 grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-10 uppercase">
-      <div className="w-full flex flex-row lg:flex-col gap-20 justify-between">
-        <FadeIn
-          delay={0.2}
-          className="text-[12vw] md:text-[7vw] font-bold hover:text-black transition-all duration-300 ease-in-out leading-none"
-        >
-          Syed N.
-        </FadeIn>
-        <div>
+      <div className="w-full flex">
+        <div className="w-full lg:w-auto flex flex-col-reverse lg:flex-col gap-8 lg:gap-20 justify-between">
+          <FadeIn
+            delay={0.2}
+            className="text-[18vw] md:text-[10vw] font-bold hover:text-black transition-all duration-300 ease-in-out leading-none"
+          >
+            Syed N.
+          </FadeIn>
+
           <FadeIn
             delay={0.4}
-            className="w-18 md:w-28 lg:w-40 h-18 md:h-28 lg:h-40 rounded-md bg-[#1b1b1b] flex justify-center items-center"
+            className="w-32 md:w-40 lg:w-80 h-32 md:h-40 lg:h-80 aspect-square"
           >
-            <ArrowUpRight stroke="#CFA355" className="w-28 h-28" />
+            <Image src={`https://res.cloudinary.com/de8g5laai/image/upload/v1770447960/Morrison_Sterling_4_chgufl.jpg`} alt="arrow icon image on dark square" width={800} height={800} className="w-full h-full object-cover" />
           </FadeIn>
         </div>
       </div>
@@ -52,12 +53,14 @@ const Footer = () => {
                 </a>
               </FadeIn>
             ))}
-            <FadeIn delay={0.6} className="md:hidden"><a
+            <FadeIn delay={0.6} className="md:hidden">
+              <a
                 href="#"
                 className="tracking-widest hover:text-black transition-all duration-300 font-semibold leading-none"
               >
                 [ Email ]
-              </a></FadeIn>
+              </a>
+            </FadeIn>
             <FadeIn delay={0.6} className="hidden md:block mt-auto">
               <a
                 href="#"

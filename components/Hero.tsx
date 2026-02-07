@@ -22,7 +22,7 @@ const items = [
 
 const Hero = () => {
   return (
-    <section className="w-full lg:min-h-screen flex flex-col relative text-primary pt-10 bg-black">
+    <section className="w-full min-h-[90vh] lg:min-h-screen flex flex-col relative text-primary pt-10 bg-black">
       {/* Background Cover */}
       <FadeIn delay={0.1} className="absolute inset-0 w-full h-full z-0 blur-[0px]">
         <Image
@@ -40,8 +40,6 @@ const Hero = () => {
       >
         SOFTWARE
       </FadeIn>
-      {/* <div className="w-full lg:-mt-20 relative z-10">ENGNR.</div> */}
-
       <FadeIn
         delay={0.5}
         direction="left"
@@ -67,16 +65,18 @@ const Hero = () => {
         delay={0.4}
         className="absolute z-5 inset-0 w-full h-full flex justify-center items-end"
       >
-        <Image
+        <div className="h-[85%] aspect-711/841 ">
+          <Image
           src="https://res.cloudinary.com/de8g5laai/image/upload/v1770266190/ChatGPT_Image_Feb_4_2026_09_14_51_PM-Photoroom_diyiou.png"
           alt="syed shaeduzzaman noor photo"
           height={841}
           width={711}
-          className="h-[85%] w-auto"
+          className="object-cover"
         />
+        </div>
       </FadeIn>
 
-      <div className="w-full relative pt-10 lg:pt-0 lg:absolute bottom-0 z-20 flex flex-col gap-10 lg:gap-14">
+      <div className="w-full  pt-0 absolute bottom-0 z-20 flex flex-col gap-10 lg:gap-14">
         <div className="px-4 md:px-6 lg:px-0 lg:pl-6 max-w-110 relative z-1">
           <FadeIn delay={0.7}>
             <p className="max-w-2xl mb-8 text-lg lg:text-xl">
