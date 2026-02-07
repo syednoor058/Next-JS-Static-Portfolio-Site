@@ -14,7 +14,7 @@ const geistSans = Geist({
 const oswald = Oswald({
   variable: "--font-oswald",
   subsets: ["latin"],
-})
+});
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -23,7 +23,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Syed Noor | Welcome to My Portfolio",
-  description: "Full-stack Software Developer with more than 2 years of experience, working in multiple software development projects, building high-quality, production-ready web applications.",
+  description:
+    "Full-stack Software Developer with more than 2 years of experience, working in multiple software development projects, building high-quality, production-ready web applications.",
 };
 
 export default function RootLayout({
@@ -34,15 +35,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${oswald.variable} antialiased w-screen overflow-x-hidden`}
+        className={`${geistSans.variable} ${geistMono.variable} ${oswald.variable} antialiased w-screen overflow-x-hidden bg-[#e5e5e0]`}
       >
-        <header>
-          <Navbar />
-        </header>
-        <main>
-          <LenisContainer>{children}</LenisContainer>
-        </main>
-        <Footer />
+        <div id="blend-root" className="relative">
+          <header>
+            <Navbar />
+          </header>
+          <main>
+            <LenisContainer>{children}</LenisContainer>
+          </main>
+          <Footer />
+        </div>
       </body>
     </html>
   );

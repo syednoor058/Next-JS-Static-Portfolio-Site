@@ -90,6 +90,7 @@ export default function Navbar() {
               <Link
                 className="transition-all duration-700 cursor-pointer hover:text-white hover:tracking-[0.5rem] ease-in-out hover:font-bold"
                 href={`${section.url}`}
+                onClick={toggleMenu}
               >
                 {section.name}
               </Link>
@@ -136,7 +137,7 @@ export default function Navbar() {
           }}
         >
           <Link href="/">
-            <div className="text-white font-bold mix-blend-difference text-xl">
+            <div className="text-white font-bold text-xl mix-blend-difference">
               SYED N.
             </div>
           </Link>
@@ -146,17 +147,17 @@ export default function Navbar() {
           onClick={toggleMenu}
           aria-label="Toggle menu"
           aria-expanded={isOpen}
-          className="flex flex-col items-center justify-center gap-1 rounded-full cursor-pointer mix-blend-difference"
+          className="flex flex-col items-center justify-center gap-1 rounded-full cursor-pointer"
           style={{
             clipPath: showBurger
               ? "circle(50% at 50% 50%)"
               : "circle(0% at 50% 50%)",
           }}
         >
-          <span ref={topLineRef} className="block h-0.5 w-6 bg-white md:w-10" />
+          <span ref={topLineRef} className="block h-0.5 w-6 bg-white md:w-10 mix-blend-difference" />
           <span
             ref={bottomLineRef}
-            className="block h-0.5 w-6 bg-white md:w-10"
+            className="block h-0.5 w-6 bg-white md:w-10 mix-blend-difference"
           />
         </button>
       </div>

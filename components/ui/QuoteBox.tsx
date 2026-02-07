@@ -85,7 +85,7 @@ const QuoteBox = () => {
     );
   };
 
-  const fadeOut = (onComplete) => {
+  const fadeOut = (onComplete: () => void) => {
     gsap.to(quoteRef.current, {
       autoAlpha: 0,
       y: -10,
