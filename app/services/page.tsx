@@ -2,7 +2,13 @@ import FadeIn from "@/components/ui/FadeIn";
 import ProjectCard from "@/components/ui/ProjectCard";
 import SectionHeader from "@/components/ui/SectionHeader";
 import { projectsList } from "@/constants";
+import { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Full-Stack Development, SaaS & API Services | Syed Noor",
+  description: "Professional full-stack development, SaaS solutions, API integration, and performance optimization tailored for modern businesses.",
+}
 
 const page = () => {
   return (

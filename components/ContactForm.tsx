@@ -91,16 +91,16 @@ const ContactForm = () => {
                     <SelectValue placeholder="Select a topic" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="corporate">Corporate Law</SelectItem>
-                    <SelectItem value="ma">Mergers & Acquisitions</SelectItem>
+                    <SelectItem value="corporate">Web Application</SelectItem>
+                    <SelectItem value="ma">Management System</SelectItem>
                     <SelectItem value="litigation">
-                      Commercial Litigation
+                      API Integration
                     </SelectItem>
                     <SelectItem value="securities">
-                      Securities & Finance
+                      Performance Optimization
                     </SelectItem>
-                    <SelectItem value="real-estate">Real Estate</SelectItem>
-                    <SelectItem value="ip">Intellectual Property</SelectItem>
+                    <SelectItem value="real-estate">Maintenance & Support</SelectItem>
+                    <SelectItem value="ip">Technical Consultation</SelectItem>
                     <SelectItem value="other">Other Inquiry</SelectItem>
                   </SelectContent>
                 </Select>

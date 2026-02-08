@@ -1,7 +1,13 @@
 import ProjectSection from "@/components/ProjectSection";
 import Testimonials from "@/components/TestimonialSection";
 import FadeIn from "@/components/ui/FadeIn";
+import { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Selected Projects & Case Studies | Full-Stack & SaaS Work",
+  description: "Explore real-world projects showcasing scalable SaaS products, web applications, and performance-driven development solutions.",
+}
 
 const page = () => {
   return (

@@ -10,7 +10,13 @@ import {
   School,
   University,
 } from "lucide-react";
+import { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "About Me | Full-Stack Developer & SaaS Engineer",
+  description: "Learn about my journey, skills, and experience building scalable software, SaaS platforms, and modern web applications.",
+}
 
 const timelineEvents = [
   {

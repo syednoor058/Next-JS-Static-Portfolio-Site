@@ -5,6 +5,8 @@ import "./globals.css";
 import LenisContainer from "@/components/LenisContainer";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import "maplibre-gl/dist/maplibre-gl.css";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,9 +24,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Syed Noor | Welcome to My Portfolio",
+  title: "Full-Stack Developer & SaaS Solutions Expert | Syed Noor",
   description:
-    "Full-stack Software Developer with more than 2 years of experience, working in multiple software development projects, building high-quality, production-ready web applications.",
+    "I design and build scalable web apps, SaaS platforms, and high-performance digital solutions that help businesses grow efficiently.",
 };
 
 export default function RootLayout({
