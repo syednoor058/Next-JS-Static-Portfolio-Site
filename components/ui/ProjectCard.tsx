@@ -60,7 +60,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
             ))}
           </ul>
         </div>
-        <Link href={project.url}>
+        <Link href={project.url} aria-label="Learn more about this project">
           <ArrowUpRight />
         </Link>
       </div>

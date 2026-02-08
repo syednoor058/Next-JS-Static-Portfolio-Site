@@ -27,6 +27,7 @@ export const metadata: Metadata = {
   title: "Full-Stack Developer & SaaS Solutions Expert | Syed Noor",
   description:
     "I design and build scalable web apps, SaaS platforms, and high-performance digital solutions that help businesses grow efficiently.",
+  metadataBase: new URL("https://syednoor.vercel.com"),
 };
 
 export default function RootLayout({
