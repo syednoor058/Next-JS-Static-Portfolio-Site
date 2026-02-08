@@ -84,7 +84,7 @@ const Hero = () => {
             </p>
           </FadeIn>
           <FadeIn delay={0.8}>
-            <PrimaryButton text="Get Connected" />
+            <PrimaryButton url="/contact" text="Get Connected" />
           </FadeIn>
         </div>
         <div className="w-full pb-5 bg-linear-to-t from-black to-transparent">

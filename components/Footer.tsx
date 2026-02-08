@@ -75,21 +75,21 @@ const Footer = () => {
           <ul>
             <li>
               <FadeIn delay={0.2}>
-                <Link href="#" className="hover:underline">
+                <Link href="/privacy-policy" className="hover:underline">
                   Privacy Policy
                 </Link>
               </FadeIn>
             </li>
             <li>
               <FadeIn delay={0.3}>
-                <Link href="#" className="hover:underline">
+                <Link href="/terms-of-service" className="hover:underline">
                   Terms of Service
                 </Link>
               </FadeIn>
             </li>
             <li>
               <div>
-                <Link href="#" className="hover:underline">
+                <Link href="/cookie-policy" className="hover:underline">
                   Cookie Policy
                 </Link>
               </div>

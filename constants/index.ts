@@ -79,107 +79,6 @@ export const servicesData = [
   },
 ];
 
-// Project Data
-
-export const projects = [
-  {
-    id: 1,
-    name: "Lumivance - Tech & Gadgets E-commerce",
-    description:
-      "Lumivance is an open-source Next.js eCommerce frontend project. It provides a modern, fast and customizable shopping UI.",
-    href: "https://lumivance-ecommerce.vercel.app/",
-    image: "/assets/projects/lumivance-ecommerce.jpg",
-    bgImage: "/assets/projects/lumivance-ecommerce.jpg",
-    frameworks: [
-      { id: 2, name: "Next.js" },
-      { id: 4, name: "MongoDB" },
-      { id: 5, name: "Tailwind CSS" },
-      { id: 1, name: "Redux Toolkit" },
-      { id: 3, name: "SSL Commerz" },
-    ],
-  },
-  {
-    id: 2,
-    name: "Pulse Fitness - Full Responsive Gymnassium Website",
-    description:
-      "An online store specializing in rare and decorative plants with a clean, user-friendly interface.",
-    href: "https://pulse-fitness-gym.vercel.app/",
-    image: "/assets/projects/pulse-fitness-website.jpg",
-    bgImage: "/assets/backgrounds/royal-blue-bg.jpg",
-    frameworks: [
-      { id: 2, name: "Next.js" },
-      { id: 3, name: "Stripe" },
-      { id: 4, name: "Tailwind CSS" },
-      { id: 5, name: "Framer Motion" },
-      { id: 1, name: "Relume AI" },
-    ],
-  },
-  {
-    id: 3,
-    name: "Devion Ark - SEO Optimized Agency Website",
-    description:
-      "An e-commerce platform for Apple products and accessories with deals and category filtering.",
-    href: "https://devion-ark-website.vercel.app/",
-    image: "/assets/projects/devion-ark.jpg",
-    bgImage: "/assets/backgrounds/royal-blue-bg.jpg",
-    frameworks: [
-      { id: 2, name: "Next.js" },
-      { id: 3, name: "Tailwind CSS" },
-      { id: 4, name: "Framer Motion" },
-      { id: 6, name: "GSAP" },
-      { id: 5, name: "Stripe" },
-    ],
-  },
-  {
-    id: 4,
-    name: "Real Estate Management System",
-    description:
-      "A multi-category online shop featuring electronics, home appliances, and gaming gear with special offers.",
-    href: "https://sikder-foundation.vercel.app/",
-    image: "/assets/projects/real-estate-management.jpg",
-    bgImage: "/assets/backgrounds/building-bg.jpg",
-    frameworks: [
-      { id: 1, name: "React" },
-      { id: 2, name: "Laravel" },
-      { id: 3, name: "PostgreSQL" },
-      { id: 4, name: "Tailwind CSS" },
-      { id: 5, name: "Redux Toolkit" },
-    ],
-  },
-  {
-    id: 5,
-    name: "Treatos BD - Pet Shop with POS System",
-    description:
-      "A curated collection of designer home decor items, including furniture and artisan vases.",
-    href: "https://treatosbd.com/",
-    image: "/assets/projects/treatosbd-web-store.jpg",
-    bgImage: "/assets/backgrounds/pet-cat-bg.jpg",
-    frameworks: [
-      { id: 1, name: "React" },
-      { id: 2, name: "Laravel" },
-      { id: 3, name: "PostgreSQL" },
-      { id: 4, name: "Material UI" },
-      { id: 5, name: "SSL Commerz" },
-    ],
-  },
-  {
-    id: 6,
-    name: "OmniQ - Online Car Rental Platform",
-    description:
-      "A gaming platform featuring discounted titles, top sellers, and genre-based browsing.",
-    href: "https://omniq-rent.vercel.app/",
-    image: "/assets/projects/omniQ-cars.jpg",
-    bgImage: "/assets/backgrounds/car-bg.jpg",
-    frameworks: [
-      { id: 1, name: "React" },
-      { id: 2, name: "Node.js" },
-      { id: 6, name: "Express.js" },
-      { id: 3, name: "MongoDB" },
-      { id: 4, name: "Zustand" },
-      { id: 5, name: "Tailwind CSS" },
-    ],
-  },
-];
 
 // Social Networks Links
 
@@ -212,7 +111,7 @@ export const projectsList = [
       "Headless Server",
       "AI Agent",
     ],
-    url: "#",
+    url: "https://applywise-eight.vercel.app/",
     file: "img" as const,
     alt: "ApplyWise application mockup",
     src: "https://res.cloudinary.com/de8g5laai/image/upload/v1770348776/apply-wise_pnvlit.jpg",
@@ -221,7 +120,7 @@ export const projectsList = [
   {
     title: "OmniQ | Online Car Rental Platform",
     tags: ["React", "Node.JS", "Express", "MongoDB", "Tailwind", "Zustand"],
-    url: "#",
+    url: "https://omniq-rent.vercel.app/",
     file: "vid" as const,
     src: "https://res.cloudinary.com/de8g5laai/video/upload/v1770348779/omniQ_jmfdo3.mp4",
     colSpan: 5 as const,
@@ -236,7 +135,7 @@ export const projectsList = [
       "Redux",
       "SSLCommerz",
     ],
-    url: "#",
+    url: "https://lumivance-ecommerce.vercel.app/",
     file: "img" as const,
     alt: "Lumivance ecommerce application mockup",
     src: "https://res.cloudinary.com/de8g5laai/image/upload/v1770348777/lumivance_kxlimi.jpg",
@@ -252,7 +151,7 @@ export const projectsList = [
       "Framer Motion",
       "Stripe",
     ],
-    url: "#",
+    url: "https://lexora-ashy.vercel.app/",
     file: "img" as const,
     alt: "lexora business portfolio mockup",
     src: "https://res.cloudinary.com/de8g5laai/image/upload/v1770348777/lexora_crklet.jpg",
@@ -261,7 +160,7 @@ export const projectsList = [
   {
     title: "PropSuit | Real Estate Management System",
     tags: ["React", "Laravel", "PostgreSQL", "Tailwind", "Redux"],
-    url: "#",
+    url: "https://sikder-foundation.vercel.app/",
     file: "vid" as const,
     src: "https://res.cloudinary.com/de8g5laai/video/upload/v1770348779/propsuit_dutgec.mp4",
     colSpan: 7 as const,
@@ -275,7 +174,7 @@ export const projectsList = [
       "Framer Motion",
       "Stripe",
     ],
-    url: "#",
+    url: "https://pulse-fitness-gym.vercel.app/",
     file: "img" as const,
     alt: "pulse fitness gymnasium mockup",
     src: "https://res.cloudinary.com/de8g5laai/image/upload/v1770348777/pulse-fitness_jzm10d.jpg",

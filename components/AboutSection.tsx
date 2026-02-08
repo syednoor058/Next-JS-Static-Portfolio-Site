@@ -57,7 +57,7 @@ const AboutSection = () => {
           </p>
         </FadeIn>
         <FadeIn delay={0.4}>
-          <PrimaryButton text="Learn More" />
+          <PrimaryButton url="/about" text="Learn More" />
         </FadeIn>
       </div>
     </section>
