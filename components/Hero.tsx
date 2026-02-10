@@ -71,7 +71,7 @@ const Hero = () => {
       >
         <div className="h-[70%] lg:h-[85%] aspect-711/841 ">
           <Image
-            src="https://res.cloudinary.com/de8g5laai/image/upload/v1770703131/Untitled_design_5_-Photoroom_zvnyxy.png"
+            src="https://res.cloudinary.com/de8g5laai/image/upload/v1770705914/Untitled_design_10_-Photoroom_alcwkj.png"
             alt="a robot wearing an engineer cap"
             height={841}
             width={711}
