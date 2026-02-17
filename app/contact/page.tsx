@@ -3,11 +3,13 @@ import Map from "@/components/Map";
 import FadeIn from "@/components/ui/FadeIn";
 import SectionHeader from "@/components/ui/SectionHeader";
 import { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Contact | Start Your Project with Syed Noor",
-  description: "Have a project in mind? Get in touch to discuss full-stack development, SaaS solutions, or technical consultation.",
-}
+  description:
+    "Have a project in mind? Get in touch to discuss full-stack development, SaaS solutions, or technical consultation.",
+};
 
 const page = () => {
   return (
@@ -18,13 +20,12 @@ const page = () => {
           delay={0.1}
           className="absolute inset-0 w-full h-full z-0 blur-[0px] flex justify-center items-center"
         >
-          {/* <Image
+          <Image
             src="https://res.cloudinary.com/de8g5laai/image/upload/v1770377281/26127101_wavy_background_4_buejwi.jpg"
             alt="a dark hero background"
             fill
             className="object-cover opacity-60"
-          /> */}
-          <video src="https://res.cloudinary.com/de8g5laai/video/upload/v1771356713/324451_small_ln4nfx.mp4" className="object-contain opacity-70" muted autoPlay loop />
+          />
         </FadeIn>
 
         <div className="relative z-1">
