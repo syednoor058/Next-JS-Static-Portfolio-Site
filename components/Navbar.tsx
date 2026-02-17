@@ -127,7 +127,7 @@ export default function Navbar() {
       </nav>
 
       {/* Top Bar */}
-      <div className="fixed z-50 flex flex-row w-full items-center justify-between px-4 md:px-10 h-14">
+      <div className="fixed z-50 flex flex-row w-full items-center justify-between px-4 md:px-10 h-14 mix-blend-difference">
         <div
           className="cursor-pointer transition-all"
           style={{

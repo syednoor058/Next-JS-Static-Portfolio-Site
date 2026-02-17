@@ -15,9 +15,9 @@ const PrimaryButton = ({ text, url = "#" }: { text: string; url?: string }) => {
         href={url}
         className=" h-full
           relative z-10 flex items-center
-          pl-4 pr-16 uppercase font-bold text-dark-primary
+          pl-4 pr-16 uppercase font-semibold text-dark-primary
           transition-all duration-300 ease-in-out leading-none
-          group-hover:pl-16 group-hover:pr-4
+          group-hover:pl-16 group-hover:pr-4 text-sm
         "
       >
         {text}

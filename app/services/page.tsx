@@ -43,7 +43,7 @@ const page = () => {
               direction="down"
               className="flex justify-center items-center"
             >
-              <h1 className="[writing-mode:vertical-rl] rotate-180 uppercase text-nowrap text-[2.5vw] lg:text-[1.5vw] text-[#1b1b1b] font-medium">
+              <h1 className="rotate-180 uppercase text-nowrap text-[2.5vw] lg:text-[1.5vw] text-[#1b1b1b] font-medium" style={{writingMode: "vertical-rl"}}>
                 Build Focus
               </h1>
             </FadeIn>

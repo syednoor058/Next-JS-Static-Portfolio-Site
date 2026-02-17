@@ -24,15 +24,12 @@ const Hero = () => {
   return (
     <section className="w-full min-h-screen flex flex-col relative text-primary pt-10 bg-black overflow-hidden">
       {/* Background Cover */}
-      <FadeIn
-        delay={0.1}
-        className="absolute inset-0 w-full h-full z-0 blur-[0px]"
-      >
+      <FadeIn delay={0.1} className="absolute inset-0 w-full h-full z-0">
         <Image
           src="https://res.cloudinary.com/de8g5laai/image/upload/v1770377281/26127101_wavy_background_4_buejwi.jpg"
           alt="a dark hero background"
           fill
-          className="object-cover opacity-60"
+          className="object-cover opacity-50"
         />
       </FadeIn>
 
@@ -46,15 +43,11 @@ const Hero = () => {
       <FadeIn
         delay={0.5}
         direction="left"
-        className="w-full -mt-6 lg:-mt-20 relative inline-block"
+        className="w-full -mt-6 lg:-mt-20 relative inline-block text-end"
       >
-        <span className="absolute inset-0 z-2 text-end full-width-word text-white font-bold leading-tight">
+        <span className="relative inset-0 z-5 text-end full-width-word text-white font-bold leading-tight">
           ENGNR.
         </span>
-        <span className="invisible text-end full-width-word text-white font-bold leading-tight">
-          ENGNR.
-        </span>
-
         <span
           className="absolute inset-0 z-10 text-end full-width-word text-transparent font-bold leading-tight"
           style={{
@@ -81,9 +74,9 @@ const Hero = () => {
       </FadeIn>
 
       <div className="w-full  pt-0 absolute bottom-0 z-20 flex flex-col gap-10 lg:gap-14">
-        <div className="px-4 md:px-6 lg:px-0 lg:pl-6 max-w-110 relative z-1">
+        <div className="px-4 md:px-6 lg:px-0 lg:pl-6 max-w-110 lg:max-w-80 relative z-1">
           <FadeIn delay={0.7}>
-            <p className="max-w-2xl mb-8 text-lg lg:text-xl font-light">
+            <p className="max-w-2xl mb-8 text-lg lg:text-base font-light lg:text-white/70">
               Full-stack software engineer building scalable, performance-driven
               web applications—focused on clean architecture and real-world
               impact.
@@ -96,12 +89,12 @@ const Hero = () => {
         <div className="w-full pb-5 bg-linear-to-t from-black to-transparent">
           <Marquee
             speed={80}
-            className="overflow-hidden w-full py-2 flex items-center marquee-text-responsive font-light uppercase whitespace-nowrap text-white/70"
+            className="overflow-hidden w-full py-2 flex items-center marquee-text-responsive font-light uppercase whitespace-nowrap text-white/95"
           >
             {items.map((item, index) => (
               <span
                 key={index}
-                className="flex items-center px-3 md:px-4 gap-x-6 md:gap-x-8 lg:px-5 lg:gap-x-10 text-[4vw] md:text-[3vw] lg:text-[2vw] leading-none font-extralight"
+                className="flex items-center px-3 md:px-4 gap-x-6 md:gap-x-8 lg:px-5 lg:gap-x-10 text-[4vw] md:text-[3vw] lg:text-[1.5vw] leading-none font-extralight"
               >
                 {item} <StarNorth />
               </span>

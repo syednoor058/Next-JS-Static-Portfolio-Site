@@ -6,8 +6,9 @@ import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Selected Projects & Case Studies | Full-Stack & SaaS Work",
-  description: "Explore real-world projects showcasing scalable SaaS products, web applications, and performance-driven development solutions.",
-}
+  description:
+    "Explore real-world projects showcasing scalable SaaS products, web applications, and performance-driven development solutions.",
+};
 
 const page = () => {
   return (
@@ -37,11 +38,12 @@ const page = () => {
           </div>
           <div className="max-w-2xl flex flex-row lg:flex-row-reverse gap-3 lg:absolute lg:top-1/3 lg:right-14 z-5 mt-10 px-4 md:px-8 lg:px-0">
             <FadeIn
-              delay={0.2}
-              direction="down"
               className="flex justify-center items-center"
             >
-              <h1 className="[writing-mode:vertical-rl] uppercase text-nowrap text-[2.5vw] lg:text-[1.5vw] text-[#1b1b1b] font-medium -rotate-180 lg:rotate-0">
+              <h1
+                className="uppercase text-nowrap text-[2.5vw] lg:text-[1.5vw] text-[#1b1b1b] font-medium -rotate-180 lg:rotate-0"
+                style={{ writingMode: "vertical-rl" }}
+              >
                 Real Crafts
               </h1>
             </FadeIn>
