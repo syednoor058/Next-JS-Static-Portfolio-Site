@@ -36,8 +36,8 @@ const page = () => {
               />
             </FadeIn>
           </div>
-          <div className="max-w-2xl flex flex-row lg:flex-row-reverse gap-3 lg:absolute lg:top-1/3 lg:right-14 z-5 mt-10 px-4 md:px-8 lg:px-0">
-            <FadeIn
+          <FadeIn delay={0.2} className="max-w-2xl flex flex-row lg:flex-row-reverse gap-3 lg:absolute lg:top-1/3 lg:right-14 z-5 mt-10 px-4 md:px-8 lg:px-0">
+            <span
               className="flex justify-center items-center"
             >
               <h1
@@ -46,14 +46,14 @@ const page = () => {
               >
                 Real Crafts
               </h1>
-            </FadeIn>
+            </span>
             <FadeIn delay={0.4}>
               <p className="text-[6vw] lg:text-[4vw] font-semibold leading-none pb-10 pl-10 pr-0 lg:pl-0 lg:pr-10 border-l border-r-0 lg:border-r lg:border-l-0 border-gold lg:text-end">
                 Selected projects demonstrating execution, scale, and technical
                 clarity.
               </p>
             </FadeIn>
-          </div>
+          </FadeIn>
         </div>
       </section>
       <ProjectSection />

@@ -66,5 +66,5 @@ body {
 }
 
 @utility full-width-word {
-  @apply text-[18vw] md:text-[16vw] whitespace-nowrap overflow-hidden font-oswald;
+  @apply text-[18vw] md:text-[16vw] whitespace-nowrap overflow-hidden font-oswald leading-none;
 }

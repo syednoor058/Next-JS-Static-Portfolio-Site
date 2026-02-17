@@ -87,7 +87,7 @@ export default function ServiceCard({ service, index }: ServiceCardProps) {
           <li key={item.title} className="pb-3">
             <FadeIn delay={0.1 + i * 0.1} className="border-b border-white/30">
               <div className="flex flex-row gap-4">
-                <span className="mr-8 text-lg text-white/30">
+                <span className="mr-8 text-lg text-gold/85">
                   [{String(i + 1).padStart(2, "0")}]
                 </span>
                 <div>

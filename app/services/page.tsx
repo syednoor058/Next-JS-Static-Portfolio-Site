@@ -37,23 +37,21 @@ const page = () => {
               />
             </FadeIn>
           </div>
-          <div className="max-w-2xl flex flex-row gap-5 lg:absolute lg:top-1/3 lg:left-14 z-5 mt-10 px-4 md:px-8 lg:px-0">
-            <FadeIn
-              delay={0.2}
-              direction="down"
+          <FadeIn delay={0.2} className="max-w-2xl flex flex-row gap-5 lg:absolute lg:top-1/3 lg:left-14 z-5 mt-10 px-4 md:px-8 lg:px-0">
+            <span
               className="flex justify-center items-center"
             >
               <h1 className="rotate-180 uppercase text-nowrap text-[2.5vw] lg:text-[1.5vw] text-[#1b1b1b] font-medium" style={{writingMode: "vertical-rl"}}>
                 Build Focus
               </h1>
-            </FadeIn>
+            </span>
             <FadeIn delay={0.4}>
               <p className="text-[6vw] lg:text-[4vw] font-semibold leading-none pb-10 pl-10 border-l border-gold">
                 Engineering scalable web solutions with clarity, performance,
                 and intent.
               </p>
             </FadeIn>
-          </div>
+          </FadeIn>
         </div>
       </section>
       <section className="px-4 md:px-8 lg:px-14 pt-20 md:pt-26 lg:pt-32">

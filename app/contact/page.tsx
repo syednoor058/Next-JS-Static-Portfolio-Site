@@ -3,7 +3,6 @@ import Map from "@/components/Map";
 import FadeIn from "@/components/ui/FadeIn";
 import SectionHeader from "@/components/ui/SectionHeader";
 import { Metadata } from "next";
-import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Contact | Start Your Project with Syed Noor",
@@ -13,18 +12,19 @@ export const metadata: Metadata = {
 const page = () => {
   return (
     <>
-      <section className="w-full relative text-primary px-4 md:px-8 lg:px-10 pt-20 bg-black">
+      <section className="w-full relative text-primary px-4 md:px-8 lg:px-10 pt-20 bg-black overflow-hidden">
         {/* Background Cover */}
         <FadeIn
           delay={0.1}
-          className="absolute inset-0 w-full h-full z-0 blur-[0px]"
+          className="absolute inset-0 w-full h-full z-0 blur-[0px] flex justify-center items-center"
         >
-          <Image
+          {/* <Image
             src="https://res.cloudinary.com/de8g5laai/image/upload/v1770377281/26127101_wavy_background_4_buejwi.jpg"
             alt="a dark hero background"
             fill
             className="object-cover opacity-60"
-          />
+          /> */}
+          <video src="https://res.cloudinary.com/de8g5laai/video/upload/v1771356713/324451_small_ln4nfx.mp4" className="object-contain opacity-70" muted autoPlay loop />
         </FadeIn>
 
         <div className="relative z-1">

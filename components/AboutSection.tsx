@@ -6,7 +6,10 @@ const AboutSection = () => {
   return (
     <section className="relative w-full overflow-hidden bg-black section-container">
       {/* Background */}
-      <div className="absolute inset-0 z-0 flex items-center justify-center text-center">
+      <FadeIn
+        delay={0.3}
+        className="absolute inset-0 z-0 flex items-center justify-center text-center"
+      >
         <div
           className="relative whitespace-nowrap text-[36vw] md:text-[28vw] font-oswald font-bold uppercase leading-none text-transparent"
           style={{ WebkitTextStroke: "1px #e5e5e0" }}
@@ -14,16 +17,17 @@ const AboutSection = () => {
           About
           <div className="absolute inset-0 bg-linear-to-t from-black to-transparent z-10" />
         </div>
-      </div>
+      </FadeIn>
 
       {/* Foreground Content */}
       <div className="relative z-20 flex flex-col items-center justify-center text-center gap-6">
-        <FadeIn
-          delay={0.2}
+        <FadeIn delay={0.3}
           className={`w-full flex flex-row gap-5 justify-between text-sm uppercase pb-20 text-white/60`}
         >
           <span>[01]</span>
-          <span className="text-gold">./About</span>
+          <span className="text-gold">
+            ./About
+          </span>
           <span>Syed Noor</span>
         </FadeIn>
         <div>
