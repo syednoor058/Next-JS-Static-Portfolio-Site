@@ -2,7 +2,6 @@ import Image from "next/image";
 import FadeIn from "./ui/FadeIn";
 import PrimaryButton from "./ui/PrimaryButton";
 
-
 const HeroSection = () => {
   return (
     <section className="w-full lg:min-h-screen flex flex-col relative text-primary pt-20 overflow-hidden bg-black">
@@ -10,9 +9,12 @@ const HeroSection = () => {
       <FadeIn delay={0.1} className="absolute inset-0 w-full h-full z-0">
         <Image
           src="/images/hero-section-dark-background.webp"
-          alt="a dark hero background"
+          alt=""
+          aria-hidden="true"
           fill
+          sizes="100vw"
           className="object-cover opacity-50"
+          quality={60}
         />
       </FadeIn>
 
@@ -61,9 +63,11 @@ const HeroSection = () => {
           <Image
             src="/images/robot-for-hero-section.webp"
             alt="a robot wearing an engineer cap"
-            height={841}
-            width={711}
+            fill
+            sizes="(max-width: 768px) 240px, 338px"
             className="object-cover"
+            priority
+            quality={70}
           />
         </div>
       </FadeIn>

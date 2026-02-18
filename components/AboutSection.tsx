@@ -21,13 +21,12 @@ const AboutSection = () => {
 
       {/* Foreground Content */}
       <div className="relative z-20 flex flex-col items-center justify-center text-center gap-6">
-        <FadeIn delay={0.3}
+        <FadeIn
+          delay={0.3}
           className={`w-full flex flex-row gap-5 justify-between text-sm uppercase pb-20 text-white/60`}
         >
           <span>[01]</span>
-          <span className="text-gold">
-            ./About
-          </span>
+          <span className="text-gold">./About</span>
           <span>Syed Noor</span>
         </FadeIn>
         <div>
@@ -45,9 +44,11 @@ const AboutSection = () => {
           <Image
             src="/images/developer-picture-syed-noor.webp"
             alt="developer photo syed shaeduzzaman noor"
-            width={700}
-            height={1000}
+            width={240}
+            height={343}
+            sizes="240px"
             className="w-full h-full object-cover"
+            quality={70}
           />
         </FadeIn>
         <FadeIn delay={0.4}>
