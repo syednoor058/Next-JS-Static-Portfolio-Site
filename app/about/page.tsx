@@ -77,7 +77,7 @@ const page = () => {
         {/* Background Cover */}
         <FadeIn delay={0.1} className="absolute inset-0 w-full h-full z-0">
           <Image
-            src="https://res.cloudinary.com/de8g5laai/image/upload/v1770377281/26127101_wavy_background_4_buejwi.jpg"
+            src="/images/hero-section-dark-background.webp"
             alt="a dark hero background"
             fill
             className="object-cover opacity-60"
@@ -99,7 +99,7 @@ const page = () => {
               className="h-[16vw] aspect-square relative0"
             >
               <Image
-                src={`https://res.cloudinary.com/de8g5laai/image/upload/v1770447959/Morrison_Sterling_5_-Photoroom_olia5p.png`}
+                src="/images/down-left-arrow.webp"
                 alt="arrow icon in white"
                 width={400}
                 height={400}

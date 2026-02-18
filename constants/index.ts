@@ -114,7 +114,7 @@ export const projectsList = [
     url: "https://applywise-eight.vercel.app/",
     file: "img" as const,
     alt: "ApplyWise application mockup",
-    src: "https://res.cloudinary.com/de8g5laai/image/upload/v1770348776/apply-wise_pnvlit.jpg",
+    src: "/images/projects/apply-wise-web-mockup.webp",
     colSpan: 7 as const,
   },
   {
@@ -138,7 +138,7 @@ export const projectsList = [
     url: "https://lumivance-ecommerce.vercel.app/",
     file: "img" as const,
     alt: "Lumivance ecommerce application mockup",
-    src: "https://res.cloudinary.com/de8g5laai/image/upload/v1770348777/lumivance_kxlimi.jpg",
+    src: "/images/projects/lumivance-web-mockup.webp",
     colSpan: 5 as const,
   },
   {
@@ -154,7 +154,7 @@ export const projectsList = [
     url: "https://lexora-ashy.vercel.app/",
     file: "img" as const,
     alt: "lexora business portfolio mockup",
-    src: "https://res.cloudinary.com/de8g5laai/image/upload/v1770348777/lexora_crklet.jpg",
+    src: "/images/projects/lexora-web-mockup.webp",
     colSpan: 7 as const,
   },
   {
@@ -162,7 +162,7 @@ export const projectsList = [
     tags: ["React", "Laravel", "PostgreSQL", "Tailwind", "Redux"],
     url: "https://sikder-foundation.vercel.app/",
     file: "vid" as const,
-    src: "https://res.cloudinary.com/de8g5laai/video/upload/v1770348779/propsuit_dutgec.mp4",
+    src: "https://res.cloudinary.com/de8g5laai/video/upload/v1771391710/You_Will_Get_A_Custom_Scalable_Web_Application_eoeqfe.mp4",
     colSpan: 7 as const,
   },
   {
@@ -177,7 +177,7 @@ export const projectsList = [
     url: "https://pulse-fitness-gym.vercel.app/",
     file: "img" as const,
     alt: "pulse fitness gymnasium mockup",
-    src: "https://res.cloudinary.com/de8g5laai/image/upload/v1770348777/pulse-fitness_jzm10d.jpg",
+    src: "/images/projects/pulse-fitness-web-mockup.webp",
     colSpan: 5 as const,
   },
 ];

@@ -43,8 +43,8 @@ const AboutSection = () => {
         </div>
         <FadeIn delay={0.4} className="w-60 aspect-7/10">
           <Image
-            src="https://res.cloudinary.com/de8g5laai/image/upload/v1770355545/1_jbdjim.jpg"
-            alt="developer photo"
+            src="/images/developer-picture-syed-noor.webp"
+            alt="developer photo syed shaeduzzaman noor"
             width={700}
             height={1000}
             className="w-full h-full object-cover"

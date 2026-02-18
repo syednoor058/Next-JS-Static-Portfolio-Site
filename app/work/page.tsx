@@ -17,8 +17,8 @@ const page = () => {
         {/* Background Cover */}
         <FadeIn delay={0.1} className="absolute inset-0 w-full h-full z-0">
           <Image
-            src="https://res.cloudinary.com/de8g5laai/image/upload/v1770480145/36552711_wxw4_fmdu0z.jpg"
-            alt="a dark hero background"
+            src="/images/hero-section-light-background.webp"
+            alt="a light hero background"
             fill
             className="object-cover opacity-60"
           />
@@ -28,8 +28,8 @@ const page = () => {
           <div className="w-full grid grid-cols-1 lg:grid-cols-12">
             <FadeIn delay={0.2} direction="down" className="lg:col-span-7">
               <Image
-                src="https://res.cloudinary.com/de8g5laai/image/upload/v1770492118/You_Will_Get_A_Custom_Scalable_Web_Application_4_f0osum.jpg"
-                alt="a person is using laptop on mountain"
+                src="/images/work-hero-image.webp"
+                alt="a laptop is on a desktop with a cup of coffee and a glass"
                 width={1200}
                 height={900}
                 className="w-full h-full object-cover"

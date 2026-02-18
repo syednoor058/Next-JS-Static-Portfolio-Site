@@ -2,13 +2,14 @@ import Image from "next/image";
 import FadeIn from "./ui/FadeIn";
 import PrimaryButton from "./ui/PrimaryButton";
 
+
 const HeroSection = () => {
   return (
     <section className="w-full lg:min-h-screen flex flex-col relative text-primary pt-20 overflow-hidden bg-black">
       {/* Background Cover */}
       <FadeIn delay={0.1} className="absolute inset-0 w-full h-full z-0">
         <Image
-          src="https://res.cloudinary.com/de8g5laai/image/upload/v1770377281/26127101_wavy_background_4_buejwi.jpg"
+          src="/images/hero-section-dark-background.webp"
           alt="a dark hero background"
           fill
           className="object-cover opacity-50"
@@ -18,7 +19,7 @@ const HeroSection = () => {
       <FadeIn
         delay={0.3}
         direction="right"
-        className="w-full text-start full-width-word text-white font-semibold relative z-1"
+        className="w-full text-start full-width-word text-white relative z-1 font-medium"
       >
         <h1>SOFTWARE</h1>
       </FadeIn>
@@ -27,11 +28,11 @@ const HeroSection = () => {
         direction="left"
         className="w-full mt-0 lg:-mt-6 relative inline-block text-end"
       >
-        <span className="relative inset-0 z-5 text-end full-width-word text-white font-semibold">
+        <span className="relative inset-0 z-5 text-end full-width-word text-white font-medium">
           ENGNR.
         </span>
         <span
-          className="absolute inset-0 z-10 text-end full-width-word text-transparent font-semibold hidden md:block"
+          className="absolute inset-0 z-10 text-end full-width-word text-transparent hidden md:block font-medium"
           style={{
             WebkitTextStroke: "2px white",
           }}
@@ -58,7 +59,7 @@ const HeroSection = () => {
       >
         <div className="h-100 md:h-[85%] aspect-711/841 relative">
           <Image
-            src="https://res.cloudinary.com/de8g5laai/image/upload/v1770705914/Untitled_design_10_-Photoroom_alcwkj.png"
+            src="/images/robot-for-hero-section.webp"
             alt="a robot wearing an engineer cap"
             height={841}
             width={711}

@@ -18,7 +18,7 @@ const page = () => {
           className="absolute inset-0 w-full h-full z-0 blur-[0px]"
         >
           <Image
-            src="https://res.cloudinary.com/de8g5laai/image/upload/v1770377281/26127101_wavy_background_4_buejwi.jpg"
+            src="/images/hero-section-dark-background.webp"
             alt="a dark hero background"
             fill
             className="object-cover opacity-60"

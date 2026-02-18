@@ -9,43 +9,43 @@ gsap.registerPlugin(ScrollTrigger);
 
 const PLACEHOLDER_LOGOS = [
   {
-    url: "/images/clients/projotno_tea.jpg",
+    url: "/images/clients/projotno_tea.webp",
     alt: "projotno tea logo",
   },
   {
-    url: "/images/clients/axisway.jpg",
+    url: "/images/clients/axisway.webp",
     alt: "axis way business logo",
   },
   {
-    url: "/images/clients/playwearBD.jpg",
+    url: "/images/clients/playwearBD.webp",
     alt: "playwear bd logo",
   },
   {
-    url: "/images/clients/interaid.jpg",
+    url: "/images/clients/interaid.webp",
     alt: "interaid logo",
   },
   {
-    url: "/images/clients/puppetbrush.jpg",
+    url: "/images/clients/puppetbrush.webp",
     alt: "puppetbrush logo",
   },
   {
-    url: "/images/clients/qahaf.jpg",
+    url: "/images/clients/qahaf.webp",
     alt: "qahaf logo",
   },
   {
-    url: "/images/clients/retrofino.jpg",
+    url: "/images/clients/retrofino.webp",
     alt: "retrofino logo",
   },
   {
-    url: "/images/clients/sikder_foundation.jpg",
+    url: "/images/clients/sikder_foundation.webp",
     alt: "sikder foundation logo",
   },
   {
-    url: "/images/clients/treatosBD.jpg",
+    url: "/images/clients/treatosBD.webp",
     alt: "treatos BD logo",
   },
   {
-    url: "/images/clients/pulse_fitness.jpg",
+    url: "/images/clients/pulse_fitness.webp",
     alt: "pulse fitness logo",
   },
 ];
@@ -123,7 +123,7 @@ export default function ClientSection() {
               className="col-span-2 aspect-square flex justify-center items-center pr-8 pt-8"
             >
               <Image
-                src="/images/posters/poster-1.jpg"
+                src="/images/posters/poster-1.webp"
                 alt="poster one"
                 width={800}
                 height={800}
@@ -151,7 +151,7 @@ export default function ClientSection() {
               className="col-span-2 aspect-square flex justify-center items-center border-b pl-8 pb-8 overflow-hidden"
             >
               <Image
-                src="/images/posters/poster-2.jpg"
+                src="/images/posters/poster-2.webp"
                 alt="poster two"
                 width={800}
                 height={800}
@@ -181,7 +181,7 @@ export default function ClientSection() {
             className="col-span-2 aspect-square flex justify-center items-center pr-8 py-8 border-b border-r"
           >
             <Image
-              src="/images/posters/poster-1.jpg"
+              src="/images/posters/poster-1.webp"
               alt="poster one"
               width={800}
               height={800}
@@ -210,7 +210,7 @@ export default function ClientSection() {
             className="col-span-2 aspect-square flex justify-center items-center pl-8 pt-8 border-l"
           >
             <Image
-              src="/images/posters/poster-2.jpg"
+              src="/images/posters/poster-2.webp"
               alt="poster two"
               width={800}
               height={800}
@@ -230,7 +230,7 @@ export default function ClientSection() {
             className="col-span-3 aspect-square flex justify-center items-center p-5 border-y"
           >
             <Image
-              src="/images/posters/poster-1.jpg"
+              src="/images/posters/poster-1.webp"
               alt="poster one"
               height={800}
               width={800}

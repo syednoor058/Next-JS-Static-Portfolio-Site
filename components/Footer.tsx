@@ -19,7 +19,7 @@ const Footer = () => {
             delay={0.4}
             className="w-32 md:w-40 lg:w-80 h-32 md:h-40 lg:h-80 aspect-square"
           >
-            <Image src={`https://res.cloudinary.com/de8g5laai/image/upload/v1770447960/Morrison_Sterling_4_chgufl.jpg`} alt="arrow icon image on dark square" width={800} height={800} className="w-full h-full object-cover" />
+            <Image src="/images/top-right-arrow.webp" alt="arrow icon image on dark square" width={800} height={800} className="w-full h-full object-cover" />
           </FadeIn>
         </div>
       </div>

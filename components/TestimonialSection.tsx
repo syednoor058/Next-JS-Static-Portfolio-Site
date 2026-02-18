@@ -18,21 +18,21 @@ interface Testimonial {
 
 const testimonials = [
   {
-    company: "/images/testimonials/interaid.png",
+    company: "/images/testimonials/interaid.webp",
     quote:
       "An amazing developer and human being who truly understands what a platform needs to grow.",
     name: "Md Azizul Haque",
     title: "Owner, InterAiD",
   },
   {
-    company: "/images/testimonials/puppetbrush.png",
+    company: "/images/testimonials/puppetbrush.webp",
     quote:
       "Very knowledgeable, patient, and always ready to explain things. Great experience working with him.",
     name: "Kazi Farhan Masum",
     title: "CEO, Puppetbrush",
   },
   {
-    company: "/images/testimonials/qahaf.png",
+    company: "/images/testimonials/qahaf.webp",
     quote:
       "Thanks to him, we were able to launch our platform on time and start getting sales immediately.",
     name: "Mustafa Mehedi",
