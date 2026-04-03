@@ -8,14 +8,14 @@ const AboutSection = () => {
       {/* Background */}
       <FadeIn
         delay={0.3}
-        className="absolute inset-0 z-0 flex items-center justify-center text-center"
+        className="absolute inset-0 z-0 flex items-center justify-center text-center font-mono"
       >
         <div
-          className="relative whitespace-nowrap text-[36vw] md:text-[28vw] font-oswald font-bold uppercase leading-none text-transparent"
+          className="relative whitespace-nowrap text-[36vw] font-bold uppercase leading-none text-transparent"
           style={{ WebkitTextStroke: "1px #e5e5e0" }}
         >
           About
-          <div className="absolute inset-0 bg-linear-to-t from-black to-transparent z-10" />
+          <div className="absolute w-full h-full inset-0 bg-linear-to-t from-black to-transparent z-10" />
         </div>
       </FadeIn>
 
@@ -30,13 +30,13 @@ const AboutSection = () => {
           <span>Syed Noor</span>
         </FadeIn>
         <div>
-          <h6 className="text-white text-[6vw] uppercase font-oswald leading-none">
+          <h6 className="text-white text-[6vw] uppercase font-marcellus leading-none">
             <FadeIn delay={0.4}>Creative-first.</FadeIn>
           </h6>
-          <h6 className="text-white text-[6vw] uppercase font-oswald leading-none">
+          <h6 className="text-white text-[6vw] uppercase font-marcellus leading-none">
             <FadeIn delay={0.4}>Hospitality focused.</FadeIn>
           </h6>
-          <h6 className="text-white text-[6vw] uppercase font-oswald leading-none">
+          <h6 className="text-white text-[6vw] uppercase font-marcellus leading-none">
             <FadeIn delay={0.4}>Systems enabled.</FadeIn>
           </h6>
         </div>

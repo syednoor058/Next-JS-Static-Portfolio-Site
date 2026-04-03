@@ -1,20 +1,27 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { Oswald } from "next/font/google";
 import "./globals.css";
 import LenisContainer from "@/components/LenisContainer";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import "maplibre-gl/dist/maplibre-gl.css";
+import { Marcellus } from "next/font/google";
+import { Oswald } from "next/font/google";
 
+const oswald = Oswald({
+  variable: "--font-oswald",
+  subsets: ["latin"],
+  weight: "400",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
-const oswald = Oswald({
-  variable: "--font-oswald",
+const marcellus = Marcellus({
+  weight: "400",
+  variable: "--font-marcellus",
   subsets: ["latin"],
 });
 
@@ -38,7 +45,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${oswald.variable} antialiased w-screen overflow-x-hidden bg-[#e5e5e0]`}
+        className={`${geistSans.variable} ${geistMono.variable} ${marcellus.variable} ${oswald.variable} antialiased w-screen overflow-x-hidden bg-[#e5e5e0]`}
       >
         <div id="blend-root" className="relative">
           <header>

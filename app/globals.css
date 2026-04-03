@@ -50,7 +50,7 @@ body {
 ========================= */
 
 @utility title {
-  @apply text-[34px] sm:text-[52px] md:text-[62px] lg:text-[100px] leading-[1.15];
+  @apply text-white text-[46px] sm:text-[52px] md:text-[62px] lg:text-[100px] leading-[1.15] font-marcellus font-medium;
 }
 
 @utility paragraph {
@@ -61,10 +61,14 @@ body {
   @apply px-4 md:px-8 lg:px-14 py-20 md:py-26 lg:py-32;
 }
 
+@utility font-marcellus {
+  font-family: var(--font-marcellus), serif;
+}
+
 @utility font-oswald {
   font-family: var(--font-oswald), sans-serif;
 }
 
 @utility full-width-word {
-  @apply text-[18vw] md:text-[16vw] whitespace-nowrap overflow-hidden font-oswald leading-none;
+  @apply text-[18vw] md:text-[16vw] whitespace-nowrap overflow-hidden font-marcellus leading-none;
 }

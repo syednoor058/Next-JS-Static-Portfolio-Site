@@ -24,7 +24,7 @@ const SectionHeader = ({ title, paragraph, header, theme }: HeaderData) => {
       <div className="flex flex-col md:flex-row gap-4 justify-between md:items-end">
         <FadeIn delay={0.3}>
           <h2
-            className={`${theme === "dark" ? "text-white" : "text-black"} max-w-120 text-[12vw] md:text-[7vw] font-oswald font-bold leading-none uppercase`}
+            className={`${theme === "dark" ? "text-white" : "text-black"} max-w-120 text-[12vw] md:text-[7vw] font-marcellus font-medium leading-none uppercase`}
           >
             {title}
           </h2>
