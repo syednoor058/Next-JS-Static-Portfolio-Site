@@ -6,6 +6,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { socials } from "@/constants";
 import { NAV_ITEMS } from "@/constants";
+import { BlurTextAnimationSpan } from "./ui/BlurTextAnimation";
 
 export default function Navbar() {
   const linksRef = useRef<(HTMLLIElement | null)[]>([]);
@@ -138,7 +139,7 @@ export default function Navbar() {
         >
           <Link href="/">
             <div className="text-white font-bold text-xl mix-blend-difference">
-              SYED N.
+              <BlurTextAnimationSpan text="SYED N." delay={300} />
             </div>
           </Link>
         </div>

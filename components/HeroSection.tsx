@@ -1,5 +1,5 @@
 import FadeIn from "./ui/FadeIn";
-import BlurTextAnimation from "./ui/BlurTextAnimation";
+import { BlurTextAnimationH, BlurTextAnimationP } from "./ui/BlurTextAnimation";
 
 const HeroSection = () => {
   return (
@@ -20,16 +20,16 @@ const HeroSection = () => {
       </FadeIn>
 
       <div className="relative z-10 mix-blend-difference">
-        <BlurTextAnimation
+        <BlurTextAnimationH
           text="Code. Build. Scale."
-          delay={200}
+          delay={300}
           animateBy="words"
           direction="top"
           className="title flex justify-center items-center"
         />
-        <BlurTextAnimation
+        <BlurTextAnimationP
           text="Full-Stack Developer"
-          delay={200}
+          delay={300}
           animateBy="words"
           direction="top"
           className="title flex justify-center items-center"

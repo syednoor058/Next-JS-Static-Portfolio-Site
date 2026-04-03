@@ -1,4 +1,11 @@
+import SectionTag from "@/components/SectionTag";
 import Testimonials from "@/components/TestimonialSection";
+import BeamBackground from "@/components/ui/BeamBackground";
+import {
+  BlurTextAnimationH,
+  BlurTextAnimationP,
+  BlurTextAnimationSpan,
+} from "@/components/ui/BlurTextAnimation";
 import FadeIn from "@/components/ui/FadeIn";
 import SectionHeader from "@/components/ui/SectionHeader";
 import StarNorth from "@/components/ui/StarNorth";
@@ -11,12 +18,12 @@ import {
   University,
 } from "lucide-react";
 import { Metadata } from "next";
-import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "About Me | Full-Stack Developer & SaaS Engineer",
-  description: "Learn about my journey, skills, and experience building scalable software, SaaS platforms, and modern web applications.",
-}
+  description:
+    "Learn about my journey, skills, and experience building scalable software, SaaS platforms, and modern web applications.",
+};
 
 const timelineEvents = [
   {
@@ -73,58 +80,55 @@ const timelineEvents = [
 const page = () => {
   return (
     <>
-      <section className="w-full lg:min-h-screen flex flex-col relative text-primary px-4 md:px-8 lg:px-10 pt-20 bg-black pb-20 md:pb-28 lg:pb-40">
+      <section className="w-full flex flex-col relative text-primary px-4 md:px-8 lg:px-10 pt-20 bg-black pb-20 md:pb-28 lg:pb-40">
         {/* Background Cover */}
         <FadeIn delay={0.1} className="absolute inset-0 w-full h-full z-0">
-          <Image
-            src="/images/hero-section-dark-background.webp"
-            alt="a dark hero background"
-            fill
-            className="object-cover opacity-60"
+          <BeamBackground
+            beamWidth={3}
+            beamHeight={30}
+            beamNumber={20}
+            lightColor="#ffffff"
+            speed={2}
+            noiseIntensity={1.75}
+            scale={0.2}
+            rotation={30}
           />
         </FadeIn>
 
         <div className="relative z-1">
-          <div className="w-full flex flex-col-reverse md:flex-row gap-4 justify-between items-start md:items-center">
-            <FadeIn
-              delay={0.3}
-              direction="right"
-              className="w-full text-start full-width-word text-white font-bold uppercase leading-none"
-            >
-              My Story
-            </FadeIn>
-            <FadeIn
-              delay={0.4}
-              direction="left"
-              className="h-[16vw] aspect-square relative0"
-            >
-              <Image
-                src="/images/down-left-arrow.webp"
-                alt="arrow icon in white"
-                width={400}
-                height={400}
-                className="w-full h-full object-cover -rotate-90 md:rotate-0"
-              />
-            </FadeIn>
+          <div className="w-full flex flex-col-reverse md:flex-row gap-4 justify-center items-start md:items-center mix-blend-difference">
+            <BlurTextAnimationH
+              text="My Story"
+              delay={300}
+              animateBy="words"
+              direction="top"
+              className="title flex justify-center items-center"
+            />
           </div>
-          <FadeIn
-            delay={0.2}
-            className={`w-full flex flex-row gap-5 justify-between text-sm uppercase pb-5 text-white/60 border-b border-white/15 my-10`}
-          >
-            <span>[ Syed Noor ]</span>
-            <span className="text-gold">Engineer / Developer / Programmer</span>
-            <span>Khulna, BD</span>
+          <SectionTag
+            text={[
+              "[SYED NOOR]",
+              "ENGINEER / DEVELOPER / PROGRAMMER",
+              "KHULNA, BD",
+            ]}
+            color="dark"
+            padding="pb-4 mt-10"
+          />
+          <FadeIn delay={0.3}>
+            <div className="w-full h-px bg-white/60"></div>
           </FadeIn>
-          <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20">
-            <FadeIn delay={0.3} className="flex flex-col gap-5">
-              <p className="mb-5 text-justify text-xl">
-                I’m a full-stack software engineer with nearly two years of
+          <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 mt-20">
+            <div className="flex flex-col gap-5">
+              <BlurTextAnimationP
+                text="I’m a full-stack software engineer with nearly two years of
                 professional experience building scalable, production-ready web
                 applications using the MERN stack and Next.js. My work focuses
                 on turning complex requirements into clean, maintainable systems
-                that perform reliably in real-world environments.
-              </p>
-              <FadeIn delay={0.3} className="flex mt-auto">
+                that perform reliably in real-world environments."
+                delay={20}
+                className="mb-5 text-justify text-xl"
+              />
+              <FadeIn delay={0.6} className="flex mt-auto">
                 <div className="bg-white flex flex-row gap-1.5 items-center px-4 py-1 text-[#1b1b1b] rounded-full leading-none text-sm">
                   <span>
                     <StarNorth />
@@ -132,26 +136,26 @@ const page = () => {
                   Software that’s meant to last—not just launch.
                 </div>
               </FadeIn>
-            </FadeIn>
+            </div>
             <div className="font-light">
-              <FadeIn delay={0.4}>
-                <p className="mb-5 lg:mb-10 text-justify">
-                  I work across the entire application lifecycle—from frontend
+              <BlurTextAnimationP
+                text="I work across the entire application lifecycle—from frontend
                   architecture and UI logic to backend services, RESTful APIs,
                   and database design. I’m comfortable owning features end to
                   end, making technical decisions, and ensuring performance,
-                  security, and scalability are considered from the start.
-                </p>
-              </FadeIn>
-              <FadeIn delay={0.5}>
-                <p className="text-justify">
-                  Beyond writing code, I value clarity, collaboration, and
+                  security, and scalability are considered from the start."
+                delay={20}
+                className="mb-5 lg:mb-10 text-justify"
+              />
+              <BlurTextAnimationP
+                text="Beyond writing code, I value clarity, collaboration, and
                   long-term thinking. I’ve worked in fast-paced product
                   environments where aligning with designers, product managers,
                   and stakeholders is just as important as choosing the right
-                  technical approach.
-                </p>
-              </FadeIn>
+                  technical approach."
+                delay={20}
+                className="text-justify"
+              />
             </div>
           </div>
         </div>
@@ -161,13 +165,7 @@ const page = () => {
       <section className="section-container">
         <SectionHeader
           header={["2000 - Present", "./Devlopment", "Timeline"]}
-          title={
-            <>
-              Life
-              <br />
-              History
-            </>
-          }
+          title={["Life", "History"]}
           paragraph="This timeline outlines the progression from early academic foundations to professional software engineering practice, highlighting the key stages that shaped my technical skills, problem-solving approach, and readiness to deliver production-grade applications."
           theme="light"
         />
@@ -189,11 +187,19 @@ const page = () => {
                     index % 2 === 0 ? "md:text-right md:pl-12" : "md:pr-12"
                   }`}
                 >
-                  <span className="text-gold font-semibold">{event.year}</span>
+                  <BlurTextAnimationSpan
+                    text={event.year}
+                    delay={200}
+                    className="text-gold font-semibold"
+                  />
                   <h3 className="text-xl font-semibold text-black mt-1 mb-2">
-                    {event.title}
+                    <BlurTextAnimationSpan text={event.title} delay={200} />
                   </h3>
-                  <p className="text-black/60">{event.description}</p>
+                  <BlurTextAnimationP
+                    text={event.description}
+                    delay={20}
+                    className="text-black/60"
+                  />
                 </div>
 
                 {/* Dot */}

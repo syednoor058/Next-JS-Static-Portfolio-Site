@@ -57,22 +57,26 @@ interface Logo {
 
 const LogoCell = ({
   logo,
+  delay = 0,
   borderClasses = "",
 }: {
   logo: Logo;
+  delay?: number;
   borderClasses?: string;
 }) => {
   return (
     <div
       className={`w-full aspect-square flex justify-center items-center relative ${borderClasses} overflow-hidden`}
     >
-      <Image
-        src={logo.url}
-        alt={logo.alt}
-        width={800}
-        height={800}
-        className={`absolute object-cover`}
-      />
+      <FadeIn delay={delay}>
+        <Image
+          src={logo.url}
+          alt={logo.alt}
+          width={800}
+          height={800}
+          className={`w-full h-full object-cover`}
+        />
+      </FadeIn>
     </div>
   );
 };
@@ -116,51 +120,71 @@ export default function ClientSection() {
             <LogoCell
               logo={PLACEHOLDER_LOGOS[0]}
               borderClasses="border-r border-b"
-            />
-            <LogoCell logo={PLACEHOLDER_LOGOS[1]} borderClasses="border-b" />
-            <FadeIn
               delay={0.2}
-              className="col-span-2 aspect-square flex justify-center items-center pr-8 pt-8"
-            >
-              <Image
-                src="/images/posters/poster-1.webp"
-                alt="poster one"
-                width={800}
-                height={800}
-                className="w-full h-full"
-              />
-            </FadeIn>
+            />
+            <LogoCell
+              logo={PLACEHOLDER_LOGOS[1]}
+              borderClasses="border-b"
+              delay={0.3}
+            />
+            <div className="col-span-2 aspect-square flex justify-center items-center pr-8 pt-8">
+              <FadeIn delay={0.7}>
+                <Image
+                  src="/images/posters/poster-1.webp"
+                  alt="poster one"
+                  width={800}
+                  height={800}
+                  className="w-full h-full"
+                />
+              </FadeIn>
+            </div>
           </div>
           <div className="grid grid-cols-2 border-x">
             <LogoCell
               logo={PLACEHOLDER_LOGOS[2]}
+              delay={0.4}
               borderClasses="border-r border-b"
             />
-            <LogoCell logo={PLACEHOLDER_LOGOS[3]} borderClasses="border-b" />
+            <LogoCell
+              logo={PLACEHOLDER_LOGOS[3]}
+              borderClasses="border-b"
+              delay={0.5}
+            />
             <LogoCell
               logo={PLACEHOLDER_LOGOS[4]}
               borderClasses="border-r border-b"
+              delay={0.8}
             />
-            <LogoCell logo={PLACEHOLDER_LOGOS[5]} borderClasses="border-b" />
-            <LogoCell logo={PLACEHOLDER_LOGOS[6]} borderClasses="border-r" />
-            <LogoCell logo={PLACEHOLDER_LOGOS[7]} />
+            <LogoCell
+              logo={PLACEHOLDER_LOGOS[5]}
+              borderClasses="border-b"
+              delay={0.9}
+            />
+            <LogoCell
+              logo={PLACEHOLDER_LOGOS[6]}
+              borderClasses="border-r"
+              delay={0.3}
+            />
+            <LogoCell logo={PLACEHOLDER_LOGOS[7]} delay={0.4} />
           </div>
           <div className="grid grid-cols-2">
-            <FadeIn
-              delay={0.2}
-              className="col-span-2 aspect-square flex justify-center items-center border-b pl-8 pb-8 overflow-hidden"
-            >
-              <Image
-                src="/images/posters/poster-2.webp"
-                alt="poster two"
-                width={800}
-                height={800}
-                className="w-full h-full"
-              />
-            </FadeIn>
-            <LogoCell logo={PLACEHOLDER_LOGOS[8]} borderClasses="border-r" />
-
-            <LogoCell logo={PLACEHOLDER_LOGOS[9]} />
+            <div className="col-span-2 aspect-square flex justify-center items-center border-b pl-8 pb-8 overflow-hidden">
+              <FadeIn delay={0.6}>
+                <Image
+                  src="/images/posters/poster-2.webp"
+                  alt="poster two"
+                  width={800}
+                  height={800}
+                  className="w-full h-full"
+                />
+              </FadeIn>
+            </div>
+            <LogoCell
+              logo={PLACEHOLDER_LOGOS[8]}
+              borderClasses="border-r"
+              delay={0.5}
+            />
+            <LogoCell logo={PLACEHOLDER_LOGOS[9]} delay={0.6} />
           </div>
         </div>
 
@@ -169,17 +193,19 @@ export default function ClientSection() {
           <LogoCell
             logo={PLACEHOLDER_LOGOS[0]}
             borderClasses="border-r border-b"
+            delay={0.2}
           />
           <LogoCell
             logo={PLACEHOLDER_LOGOS[1]}
             borderClasses="border-r border-b"
+            delay={0.3}
           />
-          <LogoCell logo={PLACEHOLDER_LOGOS[2]} borderClasses="border-b" />
+          <LogoCell logo={PLACEHOLDER_LOGOS[2]} borderClasses="border-b" delay={0.4} />
 
-          <FadeIn
-            delay={0.2}
+          <div
             className="col-span-2 aspect-square flex justify-center items-center pr-8 py-8 border-b border-r"
           >
+            <FadeIn delay={0.3}>
             <Image
               src="/images/posters/poster-1.webp"
               alt="poster one"
@@ -187,28 +213,29 @@ export default function ClientSection() {
               height={800}
               className="w-full h-full"
             />
-          </FadeIn>
+            </FadeIn>
+          </div>
           <div className="grid grid-cols-1">
-            <LogoCell logo={PLACEHOLDER_LOGOS[3]} borderClasses="border-b" />
-            <LogoCell logo={PLACEHOLDER_LOGOS[4]} borderClasses="border-b" />
+            <LogoCell logo={PLACEHOLDER_LOGOS[3]} borderClasses="border-b" delay={0.4} />
+            <LogoCell logo={PLACEHOLDER_LOGOS[4]} borderClasses="border-b" delay={0.5} />
           </div>
           <LogoCell
             logo={PLACEHOLDER_LOGOS[5]}
-            borderClasses="border-r border-b"
+            borderClasses="border-r border-b" delay={0.3}
           />
           <LogoCell
             logo={PLACEHOLDER_LOGOS[6]}
-            borderClasses="border-r border-b"
+            borderClasses="border-r border-b" delay={0.4}
           />
-          <LogoCell logo={PLACEHOLDER_LOGOS[7]} borderClasses="border-b" />
+          <LogoCell logo={PLACEHOLDER_LOGOS[7]} borderClasses="border-b" delay={0.5} />
           <div className="grid grid-cols-1">
-            <LogoCell logo={PLACEHOLDER_LOGOS[8]} borderClasses="border-b" />
-            <LogoCell logo={PLACEHOLDER_LOGOS[9]} />
+            <LogoCell logo={PLACEHOLDER_LOGOS[8]} borderClasses="border-b" delay={0.3} />
+            <LogoCell logo={PLACEHOLDER_LOGOS[9]} delay={0.4} />
           </div>
-          <FadeIn
-            delay={0.2}
+          <div
             className="col-span-2 aspect-square flex justify-center items-center pl-8 pt-8 border-l"
           >
+            <FadeIn delay={0.5}>
             <Image
               src="/images/posters/poster-2.webp"
               alt="poster two"
@@ -216,19 +243,20 @@ export default function ClientSection() {
               height={800}
               className="w-full h-full"
             />
-          </FadeIn>
+            </FadeIn>
+          </div>
         </div>
 
         {/* Bento Grid - Mobile*/}
         <div className="md:hidden grid grid-cols-3">
-          <LogoCell logo={PLACEHOLDER_LOGOS[0]} borderClasses="border-r" />
-          <LogoCell logo={PLACEHOLDER_LOGOS[1]} borderClasses="border-r" />
-          <LogoCell logo={PLACEHOLDER_LOGOS[2]} />
+          <LogoCell logo={PLACEHOLDER_LOGOS[0]} borderClasses="border-r" delay={0.2} />
+          <LogoCell logo={PLACEHOLDER_LOGOS[1]} borderClasses="border-r" delay={0.3} />
+          <LogoCell logo={PLACEHOLDER_LOGOS[2]} delay={0.4} />
 
-          <FadeIn
-            delay={0.2}
+          <div
             className="col-span-3 aspect-square flex justify-center items-center p-5 border-y"
           >
+            <FadeIn delay={0.3}>
             <Image
               src="/images/posters/poster-1.webp"
               alt="poster one"
@@ -236,19 +264,22 @@ export default function ClientSection() {
               width={800}
               className="w-full h-full"
             />
-          </FadeIn>
-          <LogoCell logo={PLACEHOLDER_LOGOS[3]} borderClasses="border-r" />
-          <LogoCell logo={PLACEHOLDER_LOGOS[4]} borderClasses="border-r" />
-          <LogoCell logo={PLACEHOLDER_LOGOS[5]} />
+            </FadeIn>
+          </div>
+          <LogoCell logo={PLACEHOLDER_LOGOS[3]} borderClasses="border-r" delay={0.3} />
+          <LogoCell logo={PLACEHOLDER_LOGOS[4]} borderClasses="border-r" delay={0.4} />
+          <LogoCell logo={PLACEHOLDER_LOGOS[5]} delay={0.5} />
           <LogoCell
             logo={PLACEHOLDER_LOGOS[6]}
             borderClasses="border-t border-r"
+            delay={0.3}
           />
           <LogoCell
             logo={PLACEHOLDER_LOGOS[7]}
             borderClasses="border-t border-r"
+            delay={0.4}
           />
-          <LogoCell logo={PLACEHOLDER_LOGOS[8]} borderClasses="border-t" />
+          <LogoCell logo={PLACEHOLDER_LOGOS[8]} borderClasses="border-t" delay={0.5} />
         </div>
       </div>
     </section>

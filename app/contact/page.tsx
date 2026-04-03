@@ -1,9 +1,9 @@
 import ContactForm from "@/components/ContactForm";
 import Map from "@/components/Map";
+import BeamBackground from "@/components/ui/BeamBackground";
 import FadeIn from "@/components/ui/FadeIn";
 import SectionHeader from "@/components/ui/SectionHeader";
 import { Metadata } from "next";
-import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Contact | Start Your Project with Syed Noor",
@@ -20,23 +20,22 @@ const page = () => {
           delay={0.1}
           className="absolute inset-0 w-full h-full z-0 blur-[0px] flex justify-center items-center"
         >
-          <Image
-            src="/images/hero-section-dark-background.webp"
-            alt="a dark hero background"
-            fill
-            className="object-cover opacity-60"
+          <BeamBackground
+            beamWidth={3}
+            beamHeight={30}
+            beamNumber={20}
+            lightColor="#ffffff"
+            speed={2}
+            noiseIntensity={1.75}
+            scale={0.2}
+            rotation={30}
           />
         </FadeIn>
 
         <div className="relative z-1">
           <SectionHeader
             header={["2026", "./Contact", "Get In Touch"]}
-            title={
-              <>
-                Let&apos;s
-                <br />
-                Collaborate
-              </>
+            title={["Let's", "Collaborate"]
             }
             paragraph="If you’re planning a new product, refining an existing system, or need technical support on an ongoing project, this is the right place to start. Share a bit about your goals, and I’ll respond with clarity on scope, feasibility, and next steps."
             theme="dark"

@@ -79,7 +79,6 @@ export const servicesData = [
   },
 ];
 
-
 // Social Networks Links
 
 export const socials = [
@@ -116,6 +115,7 @@ export const projectsList = [
     alt: "ApplyWise application mockup",
     src: "/images/projects/apply-wise-web-mockup.webp",
     colSpan: 7 as const,
+    delay: 0.4,
   },
   {
     title: "OmniQ | Online Car Rental Platform",
@@ -124,22 +124,17 @@ export const projectsList = [
     file: "vid" as const,
     src: "https://res.cloudinary.com/de8g5laai/video/upload/v1770348779/omniQ_jmfdo3.mp4",
     colSpan: 5 as const,
+    delay: 0.9,
   },
   {
     title: "Lumivance | Tech & Gadgets E-commerce",
-    tags: [
-      "Next.js",
-      "Tailwind",
-      "MongoDB",
-      "Vercel",
-      "Redux",
-      "SSLCommerz",
-    ],
+    tags: ["Next.js", "Tailwind", "MongoDB", "Vercel", "Redux", "SSLCommerz"],
     url: "https://lumivance-ecommerce.vercel.app/",
     file: "img" as const,
     alt: "Lumivance ecommerce application mockup",
     src: "/images/projects/lumivance-web-mockup.webp",
     colSpan: 5 as const,
+    delay: 0.4,
   },
   {
     title: "Lexora | Law Firm Business Portfolio",
@@ -156,6 +151,7 @@ export const projectsList = [
     alt: "lexora business portfolio mockup",
     src: "/images/projects/lexora-web-mockup.webp",
     colSpan: 7 as const,
+    delay: 0.9,
   },
   {
     title: "PropSuit | Real Estate Management System",
@@ -164,20 +160,16 @@ export const projectsList = [
     file: "vid" as const,
     src: "https://res.cloudinary.com/de8g5laai/video/upload/v1771391710/You_Will_Get_A_Custom_Scalable_Web_Application_eoeqfe.mp4",
     colSpan: 7 as const,
+    delay: 0.4,
   },
   {
     title: "Pulse Fitness | Gymnasium Business Portfolio",
-    tags: [
-      "Next.js",
-      "Tailwind",
-      "Relume UI",
-      "Framer Motion",
-      "Stripe",
-    ],
+    tags: ["Next.js", "Tailwind", "Relume UI", "Framer Motion", "Stripe"],
     url: "https://pulse-fitness-gym.vercel.app/",
     file: "img" as const,
     alt: "pulse fitness gymnasium mockup",
     src: "/images/projects/pulse-fitness-web-mockup.webp",
     colSpan: 5 as const,
+    delay: 0.9,
   },
 ];

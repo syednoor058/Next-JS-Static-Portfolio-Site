@@ -2,6 +2,7 @@ import { NAV_ITEMS, socials } from "@/constants";
 import Link from "next/link";
 import FadeIn from "./ui/FadeIn";
 import Image from "next/image";
+import GlitchText from "./ui/GlitchText";
 
 const Footer = () => {
   return (
@@ -10,16 +11,29 @@ const Footer = () => {
         <div className="w-full lg:w-auto flex flex-col-reverse lg:flex-col gap-8 lg:gap-20 justify-between">
           <FadeIn
             delay={0.2}
-            className="text-[18vw] md:text-[10vw] font-bold hover:text-black transition-all duration-300 ease-in-out leading-none"
+            className="text-[18vw] md:text-[10vw] font-bold leading-none"
           >
-            Syed N.
+            <GlitchText
+              speed={2}
+              enableShadows
+              enableOnHover={false}
+              className="text-[18vw] md:text-[10vw] font-bold leading-none"
+            >
+              SYED N.
+            </GlitchText>
           </FadeIn>
 
           <FadeIn
             delay={0.4}
             className="w-32 md:w-40 lg:w-80 h-32 md:h-40 lg:h-80 aspect-square"
           >
-            <Image src="/images/top-right-arrow.webp" alt="arrow icon image on dark square" width={800} height={800} className="w-full h-full object-cover" />
+            <Image
+              src="/images/top-right-arrow.webp"
+              alt="arrow icon image on dark square"
+              width={800}
+              height={800}
+              className="w-full h-full object-cover"
+            />
           </FadeIn>
         </div>
       </div>
@@ -74,36 +88,38 @@ const Footer = () => {
         <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-2 text-sm">
           <ul>
             <li>
-              <FadeIn delay={0.2}>
+              <FadeIn delay={0.5} direction="down">
                 <Link href="/privacy-policy" className="hover:underline">
                   Privacy Policy
                 </Link>
               </FadeIn>
             </li>
             <li>
-              <FadeIn delay={0.3}>
+              <FadeIn delay={0.4} direction="down">
                 <Link href="/terms-of-service" className="hover:underline">
                   Terms of Service
                 </Link>
               </FadeIn>
             </li>
             <li>
-              <div>
+              <FadeIn delay={0.3} direction="down">
                 <Link href="/cookie-policy" className="hover:underline">
                   Cookie Policy
                 </Link>
-              </div>
+              </FadeIn>
             </li>
           </ul>
           <div className="flex flex-col justify-between gap-4">
-            <FadeIn delay={0.2}>
+            <FadeIn delay={0.4} direction="down">
               Website by
               <br />
               Syed Shaeduzzaman Noor
             </FadeIn>
-            <div className="mt-auto">
-              Copyright &copy;2026 | All rights reserved.
-            </div>
+            <FadeIn delay={0.2} direction="down">
+              <div className="mt-auto">
+                Copyright &copy;2026 | All rights reserved.
+              </div>
+            </FadeIn>
           </div>
         </div>
       </div>

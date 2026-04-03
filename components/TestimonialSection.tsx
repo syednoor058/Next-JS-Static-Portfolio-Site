@@ -137,7 +137,7 @@ const Testimonials = () => {
   return (
     <section ref={sectionRef} className="section-container bg-[#0d0d0d]">
 
-      <SectionHeader header={["04", "./Validation", "Proof of Impact"]} title={<>Measured<br />Results</>} paragraph="Real feedback and measurable outcomes from delivered projects—reflecting consistent execution, reliable collaboration, and solutions that meet technical expectations and business goals." theme="dark" />
+      <SectionHeader header={["04", "./Validation", "Proof of Impact"]} title={["Measured", "Results"]} paragraph="Real feedback and measurable outcomes from delivered projects—reflecting consistent execution, reliable collaboration, and solutions that meet technical expectations and business goals." theme="dark" />
 
       {/* Testimonials Grid */}
       <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-3 gap-16">

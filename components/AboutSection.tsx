@@ -1,6 +1,10 @@
-import Image from "next/image";
+
 import FadeIn from "./ui/FadeIn";
 import PrimaryButton from "./ui/PrimaryButton";
+import ParagraphComponent from "./ui/ParagraphComponent";
+import SectionTag from "./SectionTag";
+import { BlurTextAnimationSpan } from "./ui/BlurTextAnimation";
+import ProfileCard from "./ui/ProfileCard";
 
 const AboutSection = () => {
   return (
@@ -21,27 +25,20 @@ const AboutSection = () => {
 
       {/* Foreground Content */}
       <div className="relative z-20 flex flex-col items-center justify-center text-center gap-6">
-        <FadeIn
-          delay={0.3}
-          className={`w-full flex flex-row gap-5 justify-between text-sm uppercase pb-20 text-white/60`}
-        >
-          <span>[01]</span>
-          <span className="text-gold">./About</span>
-          <span>Syed Noor</span>
-        </FadeIn>
-        <div>
+        <SectionTag text={["[01]", "./ABOUT", "SYED NOOR"]} color="dark" />
+        <div className="flex flex-col justify-center items-center">
           <h6 className="text-white text-[6vw] uppercase font-marcellus leading-none">
-            <FadeIn delay={0.4}>Creative-first.</FadeIn>
+            <BlurTextAnimationSpan text="Creative-first." delay={300} />
           </h6>
           <h6 className="text-white text-[6vw] uppercase font-marcellus leading-none">
-            <FadeIn delay={0.4}>Hospitality focused.</FadeIn>
+            <BlurTextAnimationSpan text="Hospitality focused." delay={300} />
           </h6>
           <h6 className="text-white text-[6vw] uppercase font-marcellus leading-none">
-            <FadeIn delay={0.4}>Systems enabled.</FadeIn>
+            <BlurTextAnimationSpan text="Systems enabled." delay={300} />
           </h6>
         </div>
-        <FadeIn delay={0.4} className="w-60 aspect-7/10">
-          <Image
+        <FadeIn delay={0.6} className="w-60 aspect-7/10">
+          {/* <Image
             src="/images/developer-picture-syed-noor.webp"
             alt="developer photo syed shaeduzzaman noor"
             width={240}
@@ -49,18 +46,34 @@ const AboutSection = () => {
             sizes="240px"
             className="w-full h-full object-cover"
             quality={70}
+          /> */}
+          <ProfileCard
+            imageSrc="/images/developer-picture-syed-noor.webp"
+            altText="Syed Noor - ENGNR"
+            captionText="Syed Noor - ENGNR"
+            containerHeight="343px"
+            containerWidth="240px"
+            imageHeight="343px"
+            imageWidth="240px"
+            rotateAmplitude={20}
+            scaleOnHover={1.05}
+            showMobileWarning={false}
+            displayOverlayContent
+            overlayContent={
+              <p className="tilted-card-demo-text">
+                Syed Noor - ENGNR
+              </p>
+            }
           />
         </FadeIn>
-        <FadeIn delay={0.4}>
-          <p className="text-base lg:text-lg text-white/60 font-light max-w-160">
-            I work across frontend systems, backend services, and application
+        <ParagraphComponent
+          text="I work across frontend systems, backend services, and application
             architecture to deliver scalable web products built for real users.
             Whether developing a platform from scratch, refining an existing
             codebase, or optimizing performance, I focus on clean
             implementation, long-term maintainability, and solutions that
-            support real business growth.
-          </p>
-        </FadeIn>
+            support real business growth."
+        />
         <FadeIn delay={0.4}>
           <PrimaryButton url="/about" text="My Journey" />
         </FadeIn>

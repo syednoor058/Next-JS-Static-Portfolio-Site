@@ -11,10 +11,16 @@ const RandomQuoteSection = () => {
     "Excellence",
   ];
 
-  const items2 = ["Foundation", "Scalability", "Evolve", "Deployment", "Architecture"];
+  const items2 = [
+    "Foundation",
+    "Scalability",
+    "Evolve",
+    "Deployment",
+    "Architecture",
+  ];
 
   return (
-    <section className="flex flex-col items-center justify-between gap-12 mt-16">
+    <section className="flex flex-col items-center justify-between gap-12 mt-16 bg-[#E5E5E0]">
       <Marquee
         speed={80}
         className="overflow-hidden w-full py-2 flex items-center marquee-text-responsive font-light uppercase whitespace-nowrap text-white bg-black"

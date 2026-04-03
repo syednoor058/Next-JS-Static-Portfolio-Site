@@ -3,70 +3,112 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ArrowRight } from "lucide-react";
+import FadeIn from "./FadeIn";
 
 const quotes = [
   {
     text: (
-      <p className="text-[8vw] leading-none">
-        “ <span className="font-normal">Great software</span> is built <br />
-        when a <span className="text-gold">developer learns</span>
-        <br />
-        to <span className="italic">think clearly</span> before
-        <br />
-        <span className="font-semibold">typing anything</span>. ” <br />
-        <span className="text-base opacity-70">— Kent Beck</span>
-      </p>
+      <div className="text-[8vw] leading-none">
+        <FadeIn delay={0.2}>
+          “ <span className="font-normal">Great software</span> is built
+        </FadeIn>
+        <FadeIn delay={0.4}>
+          when a <span className="text-gold">developer learns</span>
+        </FadeIn>
+        <FadeIn delay={0.6}>
+          to <span className="italic">think clearly</span> before
+        </FadeIn>
+        <FadeIn delay={0.8}>
+          <span className="font-semibold">typing anything</span>. ”
+        </FadeIn>
+        <FadeIn delay={1.0}>
+          <span className="text-base opacity-70">— Kent Beck</span>
+        </FadeIn>
+      </div>
     ),
   },
   {
     text: (
-      <p className="text-[8vw] leading-none">
-        “ A <span className="font-normal">true engineer</span> writes <br />
-        <span className="font-semibold">simple solutions</span>
-        <br />
-        to <span className="italic">problems that once</span> <br />
-        seemed <span className="text-gold font-bold">impossible</span>. ” <br />
-        <span className="text-sm opacity-70">— Martin Fowler</span>
-      </p>
+      <div className="text-[8vw] leading-none">
+        <FadeIn delay={0.2}>
+          “ A <span className="font-normal">true engineer</span> writes
+        </FadeIn>
+        <FadeIn delay={0.4}>
+          <span className="font-semibold">simple solutions</span>
+        </FadeIn>
+        <FadeIn delay={0.6}>
+          to <span className="italic">problems that once</span>
+        </FadeIn>
+        <FadeIn delay={0.8}>
+          seemed <span className="text-gold font-bold">impossible</span>. ”
+        </FadeIn>
+        <FadeIn delay={1.0}>
+          <span className="text-sm opacity-70">— Martin Fowler</span>
+        </FadeIn>
+      </div>
     ),
   },
   {
     text: (
-      <p className="text-[8vw] leading-none">
-        “ The <span className="font-normal">best code</span> feels like <br />
-        <span className="font-semibold">a quiet conversation</span>
-        <br />
-        <span className="italic font-extralight">where every line</span> knows
-        <br />
-        it&apos;s <span className="text-gold font-bold">purpose</span>. ” <br />
-        <span className="text-sm opacity-70">— Robert C. Martin</span>
-      </p>
+      <div className="text-[8vw] leading-none">
+        <FadeIn delay={0.2}>
+          “ The <span className="font-normal">best code</span> feels like
+        </FadeIn>
+        <FadeIn delay={0.4}>
+          <span className="font-semibold">a quiet conversation</span>
+        </FadeIn>
+        <FadeIn delay={0.6}>
+          <span className="italic font-extralight">where every line</span> knows
+        </FadeIn>
+        <FadeIn delay={0.8}>
+          it&apos;s <span className="text-gold font-bold">purpose</span>. ”
+        </FadeIn>
+        <FadeIn delay={1.0}>
+          <span className="text-sm opacity-70">— Robert C. Martin</span>
+        </FadeIn>
+      </div>
     ),
   },
   {
     text: (
-      <p className="text-[8vw] leading-none">
-        “ <span className="font-normal">Good engineers</span> reduce <br />
-        <span className="font-semibold">complex ideas</span>
-        <br />
-        <span className="italic">into systems</span> that work
-        <br />
-        with <span className="text-gold font-bold">elegance</span>. ” <br />
-        <span className="text-sm opacity-70">— Linus Torvalds</span>
-      </p>
+      <div className="text-[8vw] leading-none">
+        <FadeIn delay={0.2}>
+          “ <span className="font-normal">Good engineers</span> reduce
+        </FadeIn>
+        <FadeIn delay={0.4}>
+          <span className="font-semibold">complex ideas</span>
+        </FadeIn>
+        <FadeIn delay={0.6}>
+          <span className="italic">into systems</span> that work
+        </FadeIn>
+        <FadeIn delay={0.8}>
+          with <span className="text-gold font-bold">elegance</span>. ”
+        </FadeIn>
+        <FadeIn delay={1.0}>
+          <span className="text-sm opacity-70">— Linus Torvalds</span>
+        </FadeIn>
+      </div>
     ),
   },
   {
     text: (
-      <p className="text-[8vw] leading-none">
-        “ <span className="font-normal">Engineering</span> is art that <br />
-        <span className="font-semibold">solves real problems</span>
-        <br />
-        with <span className="italic">logic shaped </span>
-        <br />
-        into <span className="text-gold font-bold">structure</span>. ” <br />
-        <span className="text-sm opacity-70">— Bjarne Stroustrup</span>
-      </p>
+      <div className="text-[8vw] leading-none">
+        <FadeIn delay={0.2}>
+          “ <span className="font-normal">Engineering</span> is art that
+        </FadeIn>
+        <FadeIn delay={0.4}>
+          <span className="font-semibold">solves real problems</span>
+        </FadeIn>
+        <FadeIn delay={0.6}>
+          with <span className="italic">logic shaped </span>
+        </FadeIn>
+        <FadeIn delay={0.8}>
+          into <span className="text-gold font-bold">structure</span>. ”
+        </FadeIn>
+        <FadeIn delay={1.0}>
+          <span className="text-sm opacity-70">— Bjarne Stroustrup</span>
+        </FadeIn>
+      </div>
     ),
   },
 ];
@@ -119,13 +161,17 @@ const QuoteBox = () => {
       >
         {quotes[currentIndex].text}
       </div>
-
-      <button
-        onClick={showNewQuote}
-        className="mt-8 px-3 py-2 rounded-full border border-black/20 hover:border-transparent hover:bg-white hover:text-black transition-all duration-300 flex flex-row justify-between items-center gap-5 cursor-pointer group"
-      >
-        <span className="">Next Quote</span> <span><ArrowRight className="group-hover:-rotate-45 transition-all duration-300 ease-in-out" /></span>
-      </button>
+      <FadeIn delay={0.3}>
+        <button
+          onClick={showNewQuote}
+          className="mt-8 px-3 py-2 rounded-full border border-black/20 hover:border-transparent hover:bg-white hover:text-black transition-all duration-300 flex flex-row justify-between items-center gap-5 cursor-pointer group"
+        >
+          <span className="">Next Quote</span>{" "}
+          <span>
+            <ArrowRight className="group-hover:-rotate-45 transition-all duration-300 ease-in-out" />
+          </span>
+        </button>
+      </FadeIn>
     </div>
   );
 };

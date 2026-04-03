@@ -1,5 +1,9 @@
 import ProjectSection from "@/components/ProjectSection";
 import Testimonials from "@/components/TestimonialSection";
+import {
+  BlurTextAnimationP,
+  BlurTextAnimationSpan,
+} from "@/components/ui/BlurTextAnimation";
 import FadeIn from "@/components/ui/FadeIn";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -36,24 +40,25 @@ const page = () => {
               />
             </FadeIn>
           </div>
-          <FadeIn delay={0.2} className="max-w-2xl flex flex-row lg:flex-row-reverse gap-3 lg:absolute lg:top-1/3 lg:right-14 z-5 mt-10 px-4 md:px-8 lg:px-0">
-            <span
-              className="flex justify-center items-center"
-            >
+          <div className="max-w-2xl flex flex-row lg:flex-row-reverse gap-3 lg:absolute lg:top-1/3 lg:right-14 z-5 mt-10 px-4 md:px-8 lg:px-0">
+            <span className="flex justify-center items-center">
               <h1
                 className="uppercase text-nowrap text-[2.5vw] lg:text-[1.5vw] text-[#1b1b1b] font-medium -rotate-180 lg:rotate-0"
                 style={{ writingMode: "vertical-rl" }}
               >
-                Real Crafts
+                <BlurTextAnimationSpan text="Real Crafts" delay={300} />
               </h1>
             </span>
-            <FadeIn delay={0.4}>
-              <p className="text-[6vw] lg:text-[4vw] font-semibold leading-none pb-10 pl-10 pr-0 lg:pl-0 lg:pr-10 border-l border-r-0 lg:border-r lg:border-l-0 border-gold lg:text-end">
-                Selected projects demonstrating execution, scale, and technical
-                clarity.
-              </p>
+            <FadeIn delay={0.3} className="w-px h-auto bg-gold">
+              <div></div>
             </FadeIn>
-          </FadeIn>
+            <p className="text-[6vw] lg:text-[4vw] font-semibold leading-none pb-10 pl-10 pr-0 lg:pl-0 lg:pr-10 lg:text-end">
+              <BlurTextAnimationP
+                text="Selected projects demonstrating execution, scale, and technical clarity."
+                delay={50}
+              />
+            </p>
+          </div>
         </div>
       </section>
       <ProjectSection />

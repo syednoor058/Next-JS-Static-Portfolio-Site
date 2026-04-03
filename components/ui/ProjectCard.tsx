@@ -11,13 +11,14 @@ interface Project {
   alt?: string;
   src: string;
   colSpan: 5 | 7;
+  delay: number;
 }
 
 const ProjectCard = ({ project }: { project: Project }) => {
   return (
     <div className={`${project.colSpan === 5 ? "md:col-span-5" : "md:col-span-7"} group`}>
       <FadeIn
-        delay={0.2}
+        delay={project.delay}
         className="w-full aspect-12/9 rounded-md overflow-hidden"
       >
         {project.file === "img" && (
@@ -49,7 +50,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
 
       <div className="w-full flex flex-row gap-4 justify-between text-dark-primary mt-4">
         <div>
-          <FadeIn delay={0.2}>
+          <FadeIn delay={0.3}>
             <h3 className="text-2xl">{project.title}</h3>
           </FadeIn>
           <ul className="flex flex-wrap text-dark-primary/70 font-light gap-y-1.5 gap-x-3 mt-1.5 uppercase">
@@ -60,9 +61,11 @@ const ProjectCard = ({ project }: { project: Project }) => {
             ))}
           </ul>
         </div>
+        <FadeIn delay={0.5}>
         <Link href={project.url} aria-label="Learn more about this project">
           <ArrowUpRight />
         </Link>
+        </FadeIn>
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
+import BeamBackground from "@/components/ui/BeamBackground";
+import { BlurTextAnimationSpan } from "@/components/ui/BlurTextAnimation";
 import FadeIn from "@/components/ui/FadeIn";
 import { Metadata } from "next";
-import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Syed Noor Portfolio",
@@ -17,20 +18,22 @@ const page = () => {
           delay={0.1}
           className="absolute inset-0 w-full h-full z-0 blur-[0px]"
         >
-          <Image
-            src="/images/hero-section-dark-background.webp"
-            alt="a dark hero background"
-            fill
-            className="object-cover opacity-60"
+          <BeamBackground
+            beamWidth={3}
+            beamHeight={30}
+            beamNumber={20}
+            lightColor="#ffffff"
+            speed={2}
+            noiseIntensity={1.75}
+            scale={0.2}
+            rotation={30}
           />
         </FadeIn>
 
-        <div className="relative z-1">
-          <FadeIn delay={0.2}>
-            <h1 className="w-full text-center uppercase text-[10vw] text-white font-bold relative leading-none">
-              Privacy Policy
+        <div className="relative z-1 flex justify-center items-center">
+            <h1 className="w-full text-center uppercase text-[10vw] text-white font-medium relative leading-none font-marcellus flex items-center justify-center">
+              <BlurTextAnimationSpan text="Privacy Policy" delay={300} />
             </h1>
-          </FadeIn>
         </div>
       </section>
       <section className="section-container flex justify-center items-center text-[#1b1b1b]">
