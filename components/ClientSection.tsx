@@ -68,7 +68,7 @@ const LogoCell = ({
     <div
       className={`w-full aspect-square flex justify-center items-center relative ${borderClasses} overflow-hidden`}
     >
-      <FadeIn delay={delay}>
+      <FadeIn delay={delay} direction="none">
         <Image
           src={logo.url}
           alt={logo.alt}
@@ -127,14 +127,16 @@ export default function ClientSection() {
               borderClasses="border-b"
               delay={0.3}
             />
-            <div className="col-span-2 aspect-square flex justify-center items-center pr-8 pt-8">
-              <FadeIn delay={0.7}>
-                <Image
-                  src="/images/posters/poster-1.webp"
-                  alt="poster one"
-                  width={800}
-                  height={800}
-                  className="w-full h-full"
+            <div className="col-span-2 aspect-square flex justify-center items-center p-1.5
+            ">
+              <FadeIn delay={0.7} direction="none">
+                <video
+                  src="https://res.cloudinary.com/de8g5laai/video/upload/q_auto/f_auto/v1775318096/Untitled_design_lcsypy.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-full object-cover"
                 />
               </FadeIn>
             </div>
@@ -168,14 +170,15 @@ export default function ClientSection() {
             <LogoCell logo={PLACEHOLDER_LOGOS[7]} delay={0.4} />
           </div>
           <div className="grid grid-cols-2">
-            <div className="col-span-2 aspect-square flex justify-center items-center border-b pl-8 pb-8 overflow-hidden">
-              <FadeIn delay={0.6}>
-                <Image
-                  src="/images/posters/poster-2.webp"
-                  alt="poster two"
-                  width={800}
-                  height={800}
-                  className="w-full h-full"
+            <div className="col-span-2 aspect-square flex justify-center items-center border-b overflow-hidden">
+              <FadeIn delay={0.6} direction="none">
+                <video
+                  src="https://res.cloudinary.com/de8g5laai/video/upload/q_auto/f_auto/v1775312671/ApplyWise.io_or3uuv.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-full object-cover"
                 />
               </FadeIn>
             </div>
@@ -200,74 +203,109 @@ export default function ClientSection() {
             borderClasses="border-r border-b"
             delay={0.3}
           />
-          <LogoCell logo={PLACEHOLDER_LOGOS[2]} borderClasses="border-b" delay={0.4} />
+          <LogoCell
+            logo={PLACEHOLDER_LOGOS[2]}
+            borderClasses="border-b"
+            delay={0.4}
+          />
 
-          <div
-            className="col-span-2 aspect-square flex justify-center items-center pr-8 py-8 border-b border-r"
-          >
-            <FadeIn delay={0.3}>
-            <Image
-              src="/images/posters/poster-1.webp"
-              alt="poster one"
-              width={800}
-              height={800}
-              className="w-full h-full"
-            />
+          <div className="col-span-2 aspect-square flex justify-center items-center p-1.5 border-b border-r">
+            <FadeIn delay={0.3} direction="none">
+              <video
+                src="https://res.cloudinary.com/de8g5laai/video/upload/q_auto/f_auto/v1775318096/Untitled_design_lcsypy.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover"
+              />
             </FadeIn>
           </div>
           <div className="grid grid-cols-1">
-            <LogoCell logo={PLACEHOLDER_LOGOS[3]} borderClasses="border-b" delay={0.4} />
-            <LogoCell logo={PLACEHOLDER_LOGOS[4]} borderClasses="border-b" delay={0.5} />
+            <LogoCell
+              logo={PLACEHOLDER_LOGOS[3]}
+              borderClasses="border-b"
+              delay={0.4}
+            />
+            <LogoCell
+              logo={PLACEHOLDER_LOGOS[4]}
+              borderClasses="border-b"
+              delay={0.5}
+            />
           </div>
           <LogoCell
             logo={PLACEHOLDER_LOGOS[5]}
-            borderClasses="border-r border-b" delay={0.3}
+            borderClasses="border-r border-b"
+            delay={0.3}
           />
           <LogoCell
             logo={PLACEHOLDER_LOGOS[6]}
-            borderClasses="border-r border-b" delay={0.4}
+            borderClasses="border-r border-b"
+            delay={0.4}
           />
-          <LogoCell logo={PLACEHOLDER_LOGOS[7]} borderClasses="border-b" delay={0.5} />
+          <LogoCell
+            logo={PLACEHOLDER_LOGOS[7]}
+            borderClasses="border-b"
+            delay={0.5}
+          />
           <div className="grid grid-cols-1">
-            <LogoCell logo={PLACEHOLDER_LOGOS[8]} borderClasses="border-b" delay={0.3} />
+            <LogoCell
+              logo={PLACEHOLDER_LOGOS[8]}
+              borderClasses="border-b"
+              delay={0.3}
+            />
             <LogoCell logo={PLACEHOLDER_LOGOS[9]} delay={0.4} />
           </div>
-          <div
-            className="col-span-2 aspect-square flex justify-center items-center pl-8 pt-8 border-l"
-          >
-            <FadeIn delay={0.5}>
-            <Image
-              src="/images/posters/poster-2.webp"
-              alt="poster two"
-              width={800}
-              height={800}
-              className="w-full h-full"
-            />
+          <div className="col-span-2 aspect-square flex justify-center items-center border-l">
+            <FadeIn delay={0.5} direction="none">
+              <video
+                src="https://res.cloudinary.com/de8g5laai/video/upload/q_auto/f_auto/v1775312671/ApplyWise.io_or3uuv.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover"
+              />
             </FadeIn>
           </div>
         </div>
 
         {/* Bento Grid - Mobile*/}
         <div className="md:hidden grid grid-cols-3">
-          <LogoCell logo={PLACEHOLDER_LOGOS[0]} borderClasses="border-r" delay={0.2} />
-          <LogoCell logo={PLACEHOLDER_LOGOS[1]} borderClasses="border-r" delay={0.3} />
+          <LogoCell
+            logo={PLACEHOLDER_LOGOS[0]}
+            borderClasses="border-r"
+            delay={0.2}
+          />
+          <LogoCell
+            logo={PLACEHOLDER_LOGOS[1]}
+            borderClasses="border-r"
+            delay={0.3}
+          />
           <LogoCell logo={PLACEHOLDER_LOGOS[2]} delay={0.4} />
 
-          <div
-            className="col-span-3 aspect-square flex justify-center items-center p-5 border-y"
-          >
-            <FadeIn delay={0.3}>
-            <Image
-              src="/images/posters/poster-1.webp"
-              alt="poster one"
-              height={800}
-              width={800}
-              className="w-full h-full"
-            />
+          <div className="col-span-3 aspect-square flex justify-center items-center border-y">
+            <FadeIn delay={0.3} direction="none">
+              <video
+                src="https://res.cloudinary.com/de8g5laai/video/upload/q_auto/f_auto/v1775312671/ApplyWise.io_or3uuv.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover"
+              />
             </FadeIn>
           </div>
-          <LogoCell logo={PLACEHOLDER_LOGOS[3]} borderClasses="border-r" delay={0.3} />
-          <LogoCell logo={PLACEHOLDER_LOGOS[4]} borderClasses="border-r" delay={0.4} />
+          <LogoCell
+            logo={PLACEHOLDER_LOGOS[3]}
+            borderClasses="border-r"
+            delay={0.3}
+          />
+          <LogoCell
+            logo={PLACEHOLDER_LOGOS[4]}
+            borderClasses="border-r"
+            delay={0.4}
+          />
           <LogoCell logo={PLACEHOLDER_LOGOS[5]} delay={0.5} />
           <LogoCell
             logo={PLACEHOLDER_LOGOS[6]}
@@ -279,7 +317,11 @@ export default function ClientSection() {
             borderClasses="border-t border-r"
             delay={0.4}
           />
-          <LogoCell logo={PLACEHOLDER_LOGOS[8]} borderClasses="border-t" delay={0.5} />
+          <LogoCell
+            logo={PLACEHOLDER_LOGOS[8]}
+            borderClasses="border-t"
+            delay={0.5}
+          />
         </div>
       </div>
     </section>

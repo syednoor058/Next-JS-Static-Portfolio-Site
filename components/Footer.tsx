@@ -11,13 +11,13 @@ const Footer = () => {
         <div className="w-full lg:w-auto flex flex-col-reverse lg:flex-col gap-8 lg:gap-20 justify-between">
           <FadeIn
             delay={0.2}
-            className="text-[18vw] md:text-[10vw] font-bold leading-none"
+            className="font-bold leading-none"
           >
             <GlitchText
               speed={2}
               enableShadows
               enableOnHover={false}
-              className="text-[18vw] md:text-[10vw] font-bold leading-none"
+              className="text-[20vw] md:text-[10vw] font-bold leading-none"
             >
               SYED N.
             </GlitchText>

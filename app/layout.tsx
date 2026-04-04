@@ -45,7 +45,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${marcellus.variable} ${oswald.variable} antialiased w-screen overflow-x-hidden bg-[#e5e5e0]`}
+        className={`${geistSans.variable} ${geistMono.variable} ${marcellus.variable} ${oswald.variable} antialiased overflow-x-hidden bg-[#e5e5e0]`}
       >
         <div id="blend-root" className="relative">
           <header>

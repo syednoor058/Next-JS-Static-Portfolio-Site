@@ -4,7 +4,7 @@ import PrimaryButton from "./ui/PrimaryButton";
 import ParagraphComponent from "./ui/ParagraphComponent";
 import SectionTag from "./SectionTag";
 import { BlurTextAnimationSpan } from "./ui/BlurTextAnimation";
-import ProfileCard from "./ui/ProfileCard";
+import ModelComp from "./ModelComp";
 
 const AboutSection = () => {
   return (
@@ -37,34 +37,8 @@ const AboutSection = () => {
             <BlurTextAnimationSpan text="Systems enabled." delay={300} />
           </h6>
         </div>
-        <FadeIn delay={0.6} className="w-60 aspect-7/10">
-          {/* <Image
-            src="/images/developer-picture-syed-noor.webp"
-            alt="developer photo syed shaeduzzaman noor"
-            width={240}
-            height={343}
-            sizes="240px"
-            className="w-full h-full object-cover"
-            quality={70}
-          /> */}
-          <ProfileCard
-            imageSrc="/images/developer-picture-syed-noor.webp"
-            altText="Syed Noor - ENGNR"
-            captionText="Syed Noor - ENGNR"
-            containerHeight="343px"
-            containerWidth="240px"
-            imageHeight="343px"
-            imageWidth="240px"
-            rotateAmplitude={20}
-            scaleOnHover={1.05}
-            showMobileWarning={false}
-            displayOverlayContent
-            overlayContent={
-              <p className="tilted-card-demo-text">
-                Syed Noor - ENGNR
-              </p>
-            }
-          />
+        <FadeIn delay={0.3} direction="none" className="w-60 aspect-7/10">
+          <ModelComp />
         </FadeIn>
         <ParagraphComponent
           text="I work across frontend systems, backend services, and application
