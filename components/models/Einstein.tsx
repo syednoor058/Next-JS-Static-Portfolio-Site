@@ -1,5 +1,6 @@
 "use client";
 
+import React, { JSX } from "react";
 import * as THREE from "three";
 import { forwardRef, useEffect } from "react";
 import { useGLTF } from "@react-three/drei";
