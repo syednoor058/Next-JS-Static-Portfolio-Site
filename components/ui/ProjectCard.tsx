@@ -56,12 +56,12 @@ const ProjectCard = ({ project }: { project: Project }) => {
           <ul className="flex flex-wrap text-dark-primary/70 font-light gap-y-1.5 gap-x-3 mt-1.5 uppercase">
             {project.tags.map((tag, i) => (
               <li className="leading-none" key={tag}>
-                <FadeIn delay={0.2 + i * 0.1}>[ {tag} ]</FadeIn>
+                <FadeIn delay={0.3 + i * 0.1}>[ {tag} ]</FadeIn>
               </li>
             ))}
           </ul>
         </div>
-        <FadeIn delay={0.5}>
+        <FadeIn delay={0.4}>
         <Link href={project.url} aria-label="Learn more about this project">
           <ArrowUpRight />
         </Link>

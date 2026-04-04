@@ -4,7 +4,7 @@ import PrimaryButton from "./ui/PrimaryButton";
 import ParagraphComponent from "./ui/ParagraphComponent";
 import SectionTag from "./SectionTag";
 import { BlurTextAnimationSpan } from "./ui/BlurTextAnimation";
-import ModelComp from "./ModelComp";
+import ModelViewer from "./ModelViewer";
 
 const AboutSection = () => {
   return (
@@ -37,9 +37,9 @@ const AboutSection = () => {
             <BlurTextAnimationSpan text="Systems enabled." delay={300} />
           </h6>
         </div>
-        <FadeIn delay={0.3} direction="none" className="w-60 aspect-7/10">
-          <ModelComp />
-        </FadeIn>
+        <div className="w-full flex justify-center items-center">
+          <ModelViewer />
+        </div>
         <ParagraphComponent
           text="I work across frontend systems, backend services, and application
             architecture to deliver scalable web products built for real users.
