@@ -131,7 +131,7 @@ export default function ClientSection() {
             ">
               <FadeIn delay={0.7} direction="none">
                 <video
-                  src="https://res.cloudinary.com/de8g5laai/video/upload/q_auto/f_auto/v1775318096/Untitled_design_lcsypy.mp4"
+                  src="https://res.cloudinary.com/de8g5laai/video/upload/q_auto/f_auto/v1775384844/Untitled_design_zv95t5.mp4"
                   autoPlay
                   loop
                   muted
@@ -212,7 +212,7 @@ export default function ClientSection() {
           <div className="col-span-2 aspect-square flex justify-center items-center p-1.5 border-b border-r">
             <FadeIn delay={0.3} direction="none">
               <video
-                src="https://res.cloudinary.com/de8g5laai/video/upload/q_auto/f_auto/v1775318096/Untitled_design_lcsypy.mp4"
+                src="https://res.cloudinary.com/de8g5laai/video/upload/q_auto/f_auto/v1775384844/Untitled_design_zv95t5.mp4"
                 autoPlay
                 loop
                 muted
